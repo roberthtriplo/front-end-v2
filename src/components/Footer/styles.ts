@@ -2,15 +2,42 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  background: rgb(241, 242, 243);
+  background: #fff4e6;
   padding: 2.5rem 0;
+  text-align:center;
+  min-height: max-content;
+  padding-bottom: 60px;
+  padding-top: 20px;
+  z-index: 2;
+  position: relative;
+
+  h1{
+    color: #001821;
+    font-family: MangoGrotesque-Bold;
+    font-size: 300px;
+    line-height: 1;
+    margin-bottom: auto;
+    margin-top: 100px;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  p{
+    color: #ff8600;
+    font-family: AT Surt Regular;
+    font-size: 35px;
+    line-height: 1;
+    margin-bottom: 60px;
+    margin-top: -30px;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
 `;
 
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
   color: #18216d;
-
+  
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
   }
@@ -30,12 +57,46 @@ export const NavLink = styled(Link)`
 `;
 
 export const Extra = styled("section")`
-  background: rgb(241, 242, 243);
+  background: #fff4e6;
   position: relative;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 2rem;
+
+  .text-center{
+    text-align:center;
+
+    a{
+      color: #001821;
+      font-family: AT Surt Regular;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+
+  .pfooter{
+    padding-right:80px;
+    padding-left:80px;
+    padding-top:20px;
+    padding-bottom:20px;
+    p{
+      color: #001821;
+      font-family: AT Surt Regular;
+      font-size: 16px;
+    }
+    .text-end{
+      text-align:right;
+      a{
+        color: #001821;
+        font-family: AT Surt Regular;
+        font-size: 16px;
+      }
+    }
+  }
+  
 `;
 
 export const LogoContainer = styled("div")`

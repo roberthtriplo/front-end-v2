@@ -2,8 +2,73 @@ import styled from "styled-components";
 
 export const RightBlockContainer = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding: 0;
+  margin-top:-114px;
+  height: 100vh;
 
+  .buttons-group{
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+
+    .btn1{
+      bottom: 80px;
+      left: 80px;
+    }
+    .btn2{
+      bottom: 80px;
+      left: 350px;
+    }
+    button{
+      background-color: #fff4e6;
+      border: none;
+      color: #001821;
+      cursor: pointer;
+      font-family: MangoGrotesque-Bold;
+      height: 92px;
+      width: 256px;
+      color: #001821;
+      font-size: 50px;
+      line-height: 50px;
+      margin-right:20px;
+      position:absolute;
+
+      &:hover{
+        color: #ffe8da;
+        background-color: #001821;
+      }
+    }
+  }
+  .text-end-float{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    .img-orange{
+
+    }
+    p{
+      color: #ffe8da;
+      font-family: AT Surt DemiBold;
+      font-size: 20px;
+      max-width: 441px;
+      text-align:right;
+      margin-bottom:0;
+      position: absolute;
+      bottom: 80px;
+      right:80px;
+    }
+    h1{
+      color: #ffe8da;
+      font-family: MangoGrotesque-Bold;
+      font-size: 100px;
+      line-height: 100px;
+      max-width: 441px;
+      text-align:right;
+      position: absolute;
+      bottom: 90px;
+      right:80px;
+    }
+  }
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
@@ -39,3 +104,4 @@ export const ButtonWrapper = styled("div")`
     margin-left: 20px;
   }
 `;
+

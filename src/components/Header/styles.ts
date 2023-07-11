@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 
 export const HeaderSection = styled("header")`
-  padding: 1rem 0.5rem;
+  z-index:9;
+  position: relative;
+  padding: 1rem 80px;
+  background: linear-gradient(rgba(35,31,32,.7),hsla(0,0%,100%,0));
+  border-bottom: 2px solid #ffe8da;
 
   .ant-row-space-between {
     align-items: center;
@@ -72,6 +76,39 @@ export const CustomNavLinkSmall = styled(NavLink)`
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
 
+  a{
+    color: #fff4e6;
+    font-family: AT Surt DemiBold;
+    font-size:16px;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgb(255, 130, 92);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 1.25rem 2rem;
+  }
+`;
+
+export const CustomNavLinkSmallLast = styled(NavLink)`
+  font-size: 16px;
+  color: #18216d;
+  transition: color 0.2s ease-in;
+  margin: 0.5rem 1rem;
+  a{
+    color: #fff4e6;
+    font-family: AT Surt DemiBold;
+    font-size:16px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: rgb(255, 130, 92);
+    }
+  }
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
   }
@@ -93,12 +130,14 @@ export const Outline = styled(MenuOutlined)<any>`
 export const Span = styled("span")`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  color: #fff4e6;
+  display: inline-block;
+  font-family: AT Surt DemiBold;
+  font-size:16px;
 
   &:hover,
   &:active,
   &:focus {
     color: rgb(255, 130, 92);
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `;
