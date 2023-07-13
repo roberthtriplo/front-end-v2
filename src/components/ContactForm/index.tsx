@@ -1,73 +1,70 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { Slide, Zoom } from "react-awesome-reveal";
-import { ContactProps, ValidationTypeProps } from "./types";
-import { useForm } from "../../common/utils/useForm";
-import validate from "../../common/utils/validationRules";
-import { Button } from "../../common/Button";
-import Block from "../Block";
-import Input from "../../common/Input";
-import TextArea from "../../common/TextArea";
-import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
+import { Slide } from "react-awesome-reveal";
+import { ContactContainer} from "./styles";
 
-const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(
-    validate
-  ) as any;
-
-  const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type];
-    return (
-      <Zoom direction="left">
-        <Span erros={errors[type]}>{ErrorMessage}</Span>
-      </Zoom>
-    );
-  };
-
+const Contact = () => {
   return (
-    <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left">
-            <Block title={title} content={content} />
-          </Slide>
+    <ContactContainer>
+      <Row >
+        <Col xs={24}>
+          <div className='mural'>
+            <picture>
+              <source media="(min-width:576px)" srcSet="/img/mural.webp" />
+              <img src="/img/mural_mb.webp" loading="lazy" alt='Mural Triplo Autos' />
+            </picture>
+          </div>
         </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
-          <Slide direction="right">
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={values.name || ""}
-                  onChange={handleChange}
-                />
-                <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
-                  type="text"
-                  name="email"
-                  placeholder="Your Email"
-                  value={values.email || ""}
-                  onChange={handleChange}
-                />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <TextArea
-                  placeholder="Your Message"
-                  value={values.message || ""}
-                  name="message"
-                  onChange={handleChange}
-                />
-                <ValidationType type="message" />
-              </Col>
-              <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
-              </ButtonContainer>
-            </FormGroup>
+        <Col xs={24}>
+          <Slide direction="left">
+          
+            <div className="slider">
+            <img src="/img/aliados.webp" alt="Aliados Triplo" className='sticker'/>
+              <div className="slide-track">
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+              </div>
+            </div>
           </Slide>
         </Col>
       </Row>

@@ -6,17 +6,21 @@ export const RightBlockContainer = styled("section")`
   margin-top:-114px;
   height: 100vh;
 
+  .img_slider{
+    width:100%;
+  }
   .buttons-group{
     position:absolute;
     bottom: 0px;
     left: 0px;
+    z-index:99;
 
     .btn1{
-      bottom: 80px;
+      bottom: 50px;
       left: 80px;
     }
     .btn2{
-      bottom: 80px;
+      bottom: 50px;
       left: 350px;
     }
     button{
@@ -54,7 +58,7 @@ export const RightBlockContainer = styled("section")`
       text-align:right;
       margin-bottom:0;
       position: absolute;
-      bottom: 80px;
+      bottom: 50px;
       right:80px;
     }
     h1{
@@ -65,7 +69,7 @@ export const RightBlockContainer = styled("section")`
       max-width: 441px;
       text-align:right;
       position: absolute;
-      bottom: 90px;
+      bottom: 60px;
       right:80px;
     }
   }

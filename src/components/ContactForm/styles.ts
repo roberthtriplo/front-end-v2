@@ -1,7 +1,73 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled("div")`
-  padding: 5rem 0;
+  z-index: 2;
+  position: relative;
+  background-color:rgb(255, 244, 230);
+  background:url(/img/fondo_aliados.webp);
+  .mural{
+    img{
+      width:100%;
+    }
+  }
+  .sticker{
+    transform: rotate(-21deg);
+    position: absolute;
+    z-index: 1;
+    left: -340px;
+    @media screen and (max-width: 540px){
+        left: -120px;
+        width: 500px;
+        position: absolute;
+        transform: rotate(-21deg);
+        z-index: 1;
+        top: 25px;
+    }
+  }
+  @mixin white-gradient {
+      background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  }
+
+
+  // Styling
+  .slider {
+      background: white;
+      background:url(/img/fondo_aliados.webp);
+      background-position-x: center;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+      height: 500px;
+      margin: auto;
+      overflow:hidden;
+      position: relative;
+      width: 100%;
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-250px * 7))}
+      }
+      .slide-track {
+          animation: scroll 40s linear infinite;
+          display: flex;
+          width: calc(250px * 7);
+          position: relative;
+          top: 43%;
+          transform: translateY(-50%);
+          height: 100px;
+      }
+      
+      .slide {
+          width: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          margin-left: 30px;
+          margin-right: 30px;
+          text-align: center;
+          img{
+              max-height: 100px;
+          }
+      }
+  }
 
   @media only screen and (max-width: 1024px) {
     padding: 3rem 0;

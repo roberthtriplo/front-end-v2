@@ -34,15 +34,15 @@ const RightBlock = ({
       <Fade direction="right">
         <Row id={id}>
           <Col span={24}>
-            <Carousel autoplay effect="fade" dots={false}>
+            <Carousel autoplay effect="fade" dots={false} autoplaySpeed={10000}>
               <div>
-                <img src="/img/slider/foto1.webp" />
+                <img src="/img/slider/foto1.webp" alt="Triplo autos" className="img_slider"/>
               </div>
               <div>
-                <img src="/img/slider/foto2.webp" />
+                <img src="/img/slider/foto2.webp" alt="Triplo autos" className="img_slider"/>
               </div>
               <div>
-                <img src="/img/slider/foto3.webp" />
+                <img src="/img/slider/foto3.webp" alt="Triplo autos" className="img_slider"/>
               </div>
             </Carousel>
           </Col>
@@ -51,8 +51,8 @@ const RightBlock = ({
       </Fade>
       <div className="buttons-group">
       <img src="/img/border_azul.webp" className="img-blue"/>
-        <Button type="primary" className="btn1">Comprar</Button>
-        <Button type="primary" className="btn2">Vender</Button>
+        <Button type="primary" className="btn1" onClick={ () => scrollTo('buy') }>Quiero Comprar</Button>
+        <Button type="primary" className="btn2" onClick={ () => scrollTo('sale') }>Quiero Vender</Button>
       </div>
       
       <div className="text-end-float">
