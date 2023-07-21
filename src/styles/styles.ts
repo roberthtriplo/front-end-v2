@@ -536,4 +536,160 @@ export const Styles = createGlobalStyle`
     .ant-drawer-content-wrapper {
         width: 300px !important;
     }
+    .ant-modal{
+        background-color: #fff4e6;
+        overflow-y: auto;
+        height: 500px;
+    }
+    .body-modal-3{
+        height: 600px;
+
+        iframe{
+            min-height: 430px;
+            border-color: transparent;
+
+            .mainContent{
+                min-width:100%;
+            }
+        }
+    }
+    .body-modal-2{
+        height: auto;
+    }
+    .body-modal{
+        background-color: #fff4e6;
+        a{
+            color: blue;
+            font-family:"AT Surt DemiBold";
+            font-size:16px;
+        }
+        p, ul, li{
+          font-family:"AT Surt DemiBold";
+          font-size:16px;
+          color: #5e6162;
+          font-weight: 100;
+        }
+        .small{
+            font-size: 13px;
+            text-align: justify;
+            margin-top:20px;
+        }
+        h4{
+            font-family:"AT Surt DemiBold";
+            color: #5e6162;
+            font-size:24px;
+            font-weight: 100;
+        }
+        .form-group{
+            margin-bottom:25px;
+        }
+        .ant-collapse-header{
+            color: #ff8600;
+            background:#ffe8da;
+            .ant-collapse-header-text{
+                font-family:"AT Surt DemiBold";
+                font-size: 18px;
+                color: #ff8600;
+            }
+        }
+        .ant-collapse{
+            background:#ffe8da;
+            border:none;
+        }
+        .ant-collapse-content{
+            background:#ffe8da;
+            border:none;
+        }
+
+        .form-sim{
+            width:100%;
+            margin: 0 auto;
+            margin-top: 10px;
+            .btn2{
+                background-color: #ffe8da;
+                border: 2px solid #ff8600;
+                color: #001821;
+                font-family: AT Surt ExtraBold;
+                font-size: 16px;
+                height: 40px;
+                width: 150px;
+                &:hover{
+                  background: #001821;
+                  border: none;
+                  color: #ffe8da;
+                }
+            }
+            .text-end{
+                text-align:right;
+            }
+            .ant-row{
+                
+                .ant-form-item-explain-error{
+                    text-align:right;
+                    font-size:12px;
+                }
+            }
+            .ant-form-item{
+                margin-bottom:20px;
+                font-family:AT Surt Regular;
+                max-width:95%;
+                .ant-form-item-label{
+                    label{
+                        font-size:13px;
+                        color:#5e6162;
+                        height:auto;
+                    }
+                }
+                .ant-form-item-row{
+                    display:block;
+                }
+            
+            .ant-form-item-control-input{
+                .ant-select-focused{
+                box-shadow:none !important;
+                }
+                .ant-select-selector, .ant-input{
+                border: none !important;
+                border-bottom: solid 1px #5e6162 !important;
+                background-color:transparent !important;
+                border-radius: 0;
+                box-shadow:none;
+                &:focus{
+                    box-shadow:none;
+                }
+                }
+                
+                .ant-input-status-error{
+                border-bottom-color:red !important;
+                }
+            }
+            }
+            input:focus-within, textarea:focus-within{
+                box-shadow:none;
+            }
+        }
+
+        .ant-modal-header{
+            background: #fff4e6;
+            border-bottom: solid 2px gray;
+            position:sticky;
+            top: 0px;
+            z-index:2;
+            .ant-modal-title{
+                font-family:"AT Surt DemiBold";
+                color: #ff8600;
+                font-size:26px;
+                line-height: 2;
+                text-align:center;
+            }
+        }
+        .ant-modal-content{
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .text-center{
+            text-align:center;
+        }
+    }
 `;

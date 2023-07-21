@@ -89,10 +89,12 @@ export const Extra = styled("section")`
     }
     .text-end{
       text-align:right;
-      a{
+      p{
         color: #001821;
         font-family: AT Surt Regular;
         font-size: 16px;
+        margin:0;
+        cursor:pointer;
       }
     }
   }
@@ -228,4 +230,19 @@ export const LanguageSwitchContainer = styled("div")`
   display: flex;
   justify-content: space-between;
   width: 85px;
+`;
+
+export const ModalStyles = styled("div")`
+  .ant-modal{
+    background-color: #fff4e6;
+  }
+  .body-modal{
+    overflow-y: auto;
+    height: 500px;
+    p{
+      font-family:"AT Surt DemiBold";
+      font-size:16px;
+      color: #5e6162;
+    }
+  }
 `;

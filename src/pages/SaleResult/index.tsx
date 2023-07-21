@@ -1,16 +1,16 @@
 import { lazy } from "react";
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-const BuyDetail = lazy(() => import("../../components/BuyDetail"));
 
-const Buy = () => {
+const SaleResult = () => {
   return (
     <Container>
-      <div id='header_top'></div>
+       <div id='header_top'></div>
       <ScrollToTop />
-      <BuyDetail />
+      <SaleResult />
+      
     </Container>
   );
 };
 
-export default Buy;
+export default SaleResult;

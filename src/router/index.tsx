@@ -1,24 +1,21 @@
 import { lazy, Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
-import routes from "./config";
+import { Route, Routes } from "react-router-dom";
 import { Styles } from "../styles/styles";
+const Home = lazy(() => import(`../pages/Home`));
+const Buy = lazy(() => import(`../pages/Buy`));
+const Sale = lazy(() => import(`../pages/Sale`));
+const SaleResult = lazy(() => import(`../pages/SaleResult`));
 
 const Router = () => {
   return (
     <Suspense fallback={null}>
       <Styles />
-      <Switch>
-        {routes.map((routeItem) => {
-          return (
-            <Route
-              key={routeItem.component}
-              path={routeItem.path}
-              exact={routeItem.exact}
-              component={lazy(() => import(`../pages/${routeItem.component}`))}
-            />
-          );
-        })}
-      </Switch>
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/comprar/detalle/:id" element={ <Buy /> } />
+        <Route path="/ventas/:id" element={ <Sale /> } />
+        <Route path="/ventas/resultado/:id" element={ <SaleResult /> } />
+      </Routes>
     </Suspense>
   );
 };
