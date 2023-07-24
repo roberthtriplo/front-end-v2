@@ -1,12 +1,15 @@
 import { Card, Col, Row, Collapse  } from "antd";
 import { Container } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Lottie from "lottie-react";
 import gifJson from "./gif_resultado.json";
 import { useState } from "react";
+import QuoteService from "../../services/quoteService";
+import PriceService from "../../services/priceService";
 
 const SaleDetail = () => {
     const navigate = useNavigate();
+    var id: any = useParams();
     const [showResult, setShowResult] = useState(false);
 
     const goHome = () =>{
@@ -22,9 +25,28 @@ const SaleDetail = () => {
         }
     }
     const goResult = (_type: any) =>{
-        localStorage.setItem("_type",_type);
-        setShowResult(true); 
-        console.log(showResult)
+        QuoteService.get(id.id).then((resp: any) =>{
+            let _data = resp.data[0];
+            let _make = _data.make.replaceAll(' ', '-')
+            let _url = "https://carros.tucarro.com.co/"+_make.toLowerCase()+"/"+_data.sname.toLowerCase()+"/"+_data.year+"_OrderId_PRICE_ITEM*CONDITION_2230581_NoIndex_True";
+            let _dataTuCarro = {
+                "url": _url,
+                "category": _data.category,
+                "status": _data.status,
+                "keys": _data.key,
+                "km": _data.km,
+                "year": _data.year,
+                "make": _make
+            }
+            QuoteService.getTuCarro(_dataTuCarro)
+            .then((resp_tc: any) => {
+                let price = resp_tc.respuesta.offer_price;
+                PriceService.save({ "id": id.id, "price": price, "option": _type })
+                .then(resp_p => { 
+                    setShowResult(true); 
+                });
+            });
+        })
     }
 
     return (

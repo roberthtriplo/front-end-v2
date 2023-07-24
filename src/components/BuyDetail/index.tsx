@@ -11,6 +11,9 @@ import {
 } from "react-share";
 import { SliderMarks } from 'antd/lib/slider';
 import React from 'react';
+import 'photoswipe/dist/photoswipe.css';
+import { Gallery, Item } from 'react-photoswipe-gallery';
+import TwilioService from '../../services/twilioService';
 
 function PaymentForm (props: any) {
     const paymentForm: any = React.useRef(null);
@@ -173,6 +176,23 @@ const BuyDetail = () => {
 
     const onFinish = (values: any) => {
         console.log('Success:', values);
+        let _data = {
+            inicial: moneyFormat(cuotaInicial),
+            plazo: cuotaValue,
+            cuota: moneyFormat(cuotaMensual),
+            nombres: values.nombres,
+            correo: values.correo,
+            celular: values.celular,
+            cedula: values.cedula,
+            ciudad: values.ciudad,
+            link: car.link_ml
+        }
+      
+        console.log(_data);
+        TwilioService.sendCotizacion(_data).then(x => {
+            form.resetFields();
+            setIsModalOpenSimulador(false);
+        })
     }
     const formatter = (value: any) => {
         
@@ -510,15 +530,27 @@ const BuyDetail = () => {
             </Col>
         </Row>
         <Row className='ccontainer my-3'>
+            <Gallery>
             {
                 slides.map(
                     (item, index) => (
                         <Col span={12} className='ma-2'>
-                            <img src={item} key={index} className="img-fluid imgs" alt="Car #1" />
-                        </Col>
+                            <Item
+                                original={item}
+                                thumbnail={item}
+                                key={"img-"+index}
+                                width="1400"
+                                height="933"
+                            >
+                            {({ ref, open }) => (
+                            <img ref={ref as React.MutableRefObject<HTMLImageElement>} onClick={open} src={item} className="img-fluid imgs" />
+                            )}
+                        </Item>
+                      </Col>
                     )
                 )
             }
+            </Gallery>
         </Row>
     </Container>
   );
