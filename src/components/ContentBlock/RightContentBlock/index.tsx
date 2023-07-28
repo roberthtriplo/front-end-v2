@@ -51,8 +51,8 @@ const RightBlock = ({
       </Fade>
       <div className="buttons-group">
       <img src="/img/border_azul.webp" className="img-blue"/>
-        <Button type="primary" className="btn1" onClick={ () => scrollTo('buy') }>Quiero Comprar</Button>
-        <Button type="primary" className="btn2" onClick={ () => scrollTo('sale') }>Quiero Vender</Button>
+        <Button type="primary" className="btn1" onClick={ () => scrollTo('sale') }>Quiero Vender</Button>
+        <Button type="primary" className="btn2" onClick={ () => scrollTo('buy') }>Quiero Comprar</Button>        
       </div>
       
       <div className="text-end-float">

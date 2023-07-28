@@ -692,4 +692,114 @@ export const Styles = createGlobalStyle`
             text-align:center;
         }
     }
+    .dropdwon-order{
+        background-color:#FFE8DA;
+        text-align:center;
+        .rc-virtual-list-holder-inner{
+            .ant-select-item-option:first-child{
+                display: none;
+                .ant-select-item-option-content{
+                    display: none;
+                }
+            }
+        }
+        .ant-select-item-option{
+            background-color:transparent;
+            .ant-select-item-option-content{
+                border: 2px solid #7fc9ea;
+                border-radius: 20px;
+                color: #001821;
+                cursor: pointer;
+                font-family: AT Surt Regular;
+                font-size: 16px;
+                padding: 3px;
+
+                &:hover{
+                    color:#FFE8DA;
+                    background:#7fc9ea;
+                }
+            }
+        }
+    }
+    .dropdownfiltros{
+        ul{
+            background-color:#FFE8DA;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            min-width: 500px;
+            padding-top: 15px;
+            li{
+                border: 2px solid #7fc9ea;
+                border-radius: 20px;
+                color: #001821;
+                cursor: pointer;
+                font-family: AT Surt Regular;
+                justify-content: center!important;
+                margin-bottom: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                min-height: 20px;
+                overflow: hidden;
+                padding: 3px;
+                text-align: center;
+                font-size:12px;
+                &:hover{
+                    color:#FFE8DA;
+                    background:#7fc9ea;
+                }
+            }
+            .ant-dropdown-menu-item-selected{
+                color:#FFE8DA;
+                background:#7fc9ea;
+            }
+        }   
+    }
+    .dropdownfiltrosSlider{
+        background-color:#FFE8DA;
+        min-width: 500px;
+        width: 500px;
+        padding: 8px 20px;
+        .form-group1:first-child{
+            max-width: 95%;
+        }
+        .form-group{
+            input{
+                font-family: AT Surt Regular;
+                font-size: 14px;
+                line-height: 14px;
+                padding: 8px 4px;
+                text-align: left;
+                background: #fff;
+                /*border: 1px solid #7fc9ea;*/
+                font-weight: 400;
+                line-height: 1;
+            }
+            .ant-input-affix-wrapper{
+                border: 1px solid #7fc9ea;
+            }
+            label{
+                color: #001821;
+                font-weight: 700;
+                font-family: AT Surt Regular;
+                font-size:12px;
+            }
+            svg{
+                width: 18px;
+                height: 18px;
+            }
+        }
+        .ant-slider-track-1{
+            background: #ff8600;
+        }
+        .ant-tooltip-open{
+            background: #ff8600;
+        }
+        .ant-slider-handle{
+            background: #7fc9ea;
+            border-color: #7fc9ea;
+            width: 17px;
+            height: 17px;
+            margin-top: -7px;
+        }
+    }
 `;

@@ -6,7 +6,7 @@ export const Container = styled("div")`
   z-index:2;
   background-color:#001821;
   padding-bottom:50px;
-
+  
   .bg{
     background-image: url(/img/header.webp);
     background-position-y: top;
@@ -25,6 +25,124 @@ export const Container = styled("div")`
   .p80{
     padding-left:80px;
     padding-right:80px;
+    .pfilter-sel{
+        max-width: max-content;
+        background: #c14717;
+        padding: 0px 10px;
+        font-size: 12px;
+        border-radius: 7px;
+        font-family: 'AT Surt Regular';
+        display: inline-block;
+        color: #fff4e6;
+        font-style: italic;
+        cursor: pointer;
+        line-height: 20px;
+        margin: 0;
+        margin-right: 10px;
+        
+        svg{
+            width: 15px;
+            height: 15px;
+            color: #ffedd2;
+            font-weight: bold;
+        }
+    }
+    
+    .pfilter-sel-2{
+        max-width: max-content;
+        background: #7fc9ea;
+        padding: 0px 10px;
+        font-size: 12px;
+        border-radius: 7px;
+        font-family: 'AT Surt Regular';
+        display: inline-block;
+        color: #ffedd2;
+        font-style: italic;
+        cursor: pointer;
+        line-height: 20px;
+        margin: 0;
+        margin-right: 10px;
+        
+        svg{
+            width: 15px;
+            height: 15px;
+            color: #ffedd2;
+            font-weight: bold;
+        }
+    }
+    .text-end{
+      text-align: right;
+      padding-right: 15px;
+      .select-order{
+        .ant-select-selector{
+          background: #c14717;
+          border-color: #c14717;
+          .ant-select-selection-search{
+            input{
+              &:focused{
+                boorder:none;
+              }
+            }
+          }
+          .ant-select-selection-item{
+            font-size: 16px;
+            color: rgb(255, 232, 218);
+            font-family: "AT Surt Regular";
+          }
+        }
+        .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+          box-shadow:none;
+        }
+        .ant-select-dropdown{
+          background:yellow;
+        }
+      }      
+    }
+
+    .filtros-new{
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10%;
+      align-items: center;
+      border: 2px solid #c14717;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      &::-webkit-scrollbar{
+        display: none;
+      }
+      .fc-filtros{
+        min-width: fit-content;
+        margin-right: 25px;
+        a{
+          color: #ffedd2;
+          font-family: AT Surt Regular;
+          font-size: 20px;
+          padding: 6px 8px 6px 8px;
+        }
+        .ant-dropdown-open{
+          background:#7fc9ea;
+          border-radius: 8px;
+          
+
+          .svg-arrow{
+            svg{
+              color: #c14717;
+            }
+          }
+        }
+        .svg-arrow{
+          vertical-align:-4px;
+          svg{
+            width: 18px;
+            height:18px;
+            color: #7fc9ea;
+            font-weight: bold;
+          }
+        }
+      }
+    }
 
     h1{
       font-family: MangoGrotesque-Regular;

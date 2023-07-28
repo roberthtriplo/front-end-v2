@@ -194,8 +194,7 @@ const BuyDetail = () => {
             setIsModalOpenSimulador(false);
         })
     }
-    const formatter = (value: any) => {
-        
+    const formatter = (value: any) => {        
         return `${moneyFormat(value)}`
     };
     const  generateRandomString = (num: number) => {
