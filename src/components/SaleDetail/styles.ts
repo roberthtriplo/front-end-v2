@@ -119,7 +119,7 @@ export const Container = styled("div")`
             right: 0;
             color: #e6f9ff;
             font-family: AT Surt Regular;
-            font-size: 40px;
+            font-size: 30px;
             line-height: 1;
         }
     }
@@ -280,13 +280,25 @@ export const Container = styled("div")`
                     background: transparent;
                     border:none;
                     .ant-collapse-content-box{
-                        padding: 4px;
-                        background: transparent;
+                        background-color: #434a4b;
+                        border-radius: 15px;
+                        border-top: none;
+                        color: #b4b7b9;
+                        font-family: AT Surt Regular;
+                        font-size: 12px;
+                        padding: 13px;
+                        
                         p{
+                            color:#b4b7b9;
                             font-family: AT Surt Regular;
-                            font-size: 12px;
-                            margin: 0;
+                            font-size:12px;
+                            margin:0;
+                            text-align: left;
+                            span{
+                                color:#ff8600;
+                            }
                         }
+                        
                     }
                 }
             }
@@ -314,7 +326,7 @@ export const Container = styled("div")`
                     .ant-collapse{
                         .ant-collapse-item{
                             .ant-collapse-header{
-                                border-bottom-color: #fff4e6;
+                                /*border-bottom-color: #fff4e6;*/
                             }
                         }
                     }

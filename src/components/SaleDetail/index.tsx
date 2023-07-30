@@ -9,6 +9,7 @@ import PriceService from "../../services/priceService";
 
 const SaleDetail = () => {
     const navigate = useNavigate();
+    const [activeKey, setActiveKey] = useState(0);
     var id: any = useParams();
     const [showResult, setShowResult] = useState(false);
 
@@ -57,67 +58,53 @@ const SaleDetail = () => {
                 <Col span={24}>
                     <img src="/img/sticker_result_2.webp" id="imgTP1"  alt="Triplo, Ventas, Compras, Colombia Bogota" className="imgSticker" onClick={ goHome }/> 
                     {/* <div className="bg_header d-none d-sm-block" id="headerSales"></div> */}
-                </Col>
-                <Col span={24}>
-                    <p className="p1">ELIGE TU OPCIÓN</p>
-                </Col>
-            </Row>
-            <Row className="row2">
-                <Col span={24}>
-                    <p className="p1">FAVORITA</p>
-                </Col>
-            </Row>
-            <Row className="row3">
-                <Col span={12} className="text-center">
-                    <Card className="card-custom directa" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('directa') }>
-                    <img src="/img/conocer_oferta.webp" alt="Triplo Autos" />
-                        <div className="cbody">
-                            <h1>Venta directa</h1>
-                            <h5>Te lo compramos en tiempo record</h5>
-                            <ul>
-                                <li>
-                                    <h2>Precio preliminar en línea</h2>
-                                    <p>Obtén un precio preliminar de inmediato</p>
-                                </li>
-                                <li>
-                                    <h2>Peritaje</h2>
-                                    <p>La revisión va por nuestra cuenta. Solo sigue las instrucciones para agendarla.</p>
-                                </li>
-                                <li>
-                                    <h2>Documentación</h2>
-                                    <p>¡Validamos el precio y listo! Nos encargamos de toda la documentación necesaria y recibes el pago hasta en el mismo día.</p>
-                                </li>
+                </Col> 
+                <Col span={24}> 
+                    <p className="p1">ELIGE TU OPCIÓN</p> 
+                </Col> 
+            </Row> 
+            <Row className="row2"> 
+                <Col span={24}> <p className="p1">FAVORITA</p> </Col> 
+            </Row> 
+            <Row className="row3"> 
+                <Col span= {12} className="text-center"> 
+                    <Card className="card-custom directa" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('directa') }> 
+                        <img src="/img/conocer_oferta.webp" alt="Triplo Autos"  onClick={() => goResult('directa') }/> 
+                        <div className="cbody"> 
+                            <h1>Venta directa</h1> 
+                            <h5>Te lo compramos en tiempo record</h5> 
+                            <ul> 
+                                <li> <h2>Precio preliminar en línea</h2> <p>Obtén un precio preliminar de  inmediato</p> </li> 
+                                <li> <h2>Peritaje</h2> <p>La revisión va por nuestra cuenta. Solo sigue las  instrucciones para agendarla.</p> </li> 
+                                <li> <h2>Documentación</h2> <p>¡Validamos el precio y listo!  Nos encargamos de toda la documentación necesaria y recibes el pago hasta en el mismo día.</p> </li>
                             </ul> 
-                        </div>
-                    </Card>
-                </Col>
-                <Col span={12} className="text-center">
-                    <Card className="card-custom consignacion" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('consignacion') }>
-                        <img src="/img/conocer_consignacion.webp" alt="Triplo Autos" />
-                        <div className="cbody">
-                            <h1>Consignación</h1>
-                            <h5>Nos encargamos de todo en la venta de tu vehículo</h5>
-                            <Collapse accordion>
-                                <Collapse.Panel key={1} header="Fotos profesionales" showArrow={false}>
-                                    <p>Nos aseguramos de crear una publicación, <span>totalmente gratis,</span> con altos estándares de diseño y fotografia, detallando fuertemente tu vehículo.</p>
+                        </div> 
+                    </Card> 
+                </Col> 
+                <Col span={12} className="text-center"> 
+                    <Card className="card-custom consignacion" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('consignacion') }> 
+                        <img src="/img/conocer_consignacion.webp" alt="Triplo Autos" onClick={() => goResult('consignacion') }/> 
+                        <div className="cbody"> <h1>Consignación</h1> <h5>Nos encargamos de todo en la venta de tu vehículo</h5>
+                            <Collapse accordion activeKey={activeKey}> 
+                                <Collapse.Panel key={1} header={<div onMouseLeave={() => setActiveKey(0) } onMouseEnter={ () => setActiveKey(1)}>Fotos profesionales</div>} showArrow={false}>
+                                    <p>Nos aseguramos de crear una publicación, <span>totalmente gratis,</span> con altos estándares de diseño y fotografia, detallando fuertemente tu vehículo.</p> 
+                                </Collapse.Panel> 
+                                <Collapse.Panel key={2} header={<div onMouseLeave={() => setActiveKey(0) } onMouseEnter={ () => setActiveKey(2)}>Red de contactos</div>} showArrow={false}> 
+                                    <p>Aprovecha nuestra amplia red de contactos en la industria. Es probable que tengamos <span>listo un cliente</span> para tu vehículo.</p> 
+                                </Collapse.Panel> 
+                                <Collapse.Panel key={3} header={<div onMouseLeave={() => setActiveKey(0) } onMouseEnter={ () => setActiveKey(3)}>Lo hacemos por ti</div>} showArrow={false}> <p>No tienes que contestar llamadas, correos ni preocuparte por mostrar el carro. Nosotros nos encargamos de <span>todo el proceso</span> de una manera
+                            segura, incluyendo la documentación.</p> 
+                                </Collapse.Panel> 
+                                <Collapse.Panel key={4} header={<div onMouseLeave={() => setActiveKey(0) } onMouseEnter={ () => setActiveKey(4)}>Facilitamos el negocio</div>} showArrow={false}> <p>Ofrecemos al cliente diferentes posibilidades de financiación y
+                            retomas para hacer la venta de tu vehículo mas <span>sencilla y rápida</span></p>
                                 </Collapse.Panel>
-                                <Collapse.Panel key={2} header="Red de contactos" showArrow={false}>
-                                    <p>Aprovecha nuestra amplia red de contactos en la industria. Es probable que tengamos <span>listo un cliente</span> para tu vehículo.</p>
+                                <Collapse.Panel key={5} header={<div onMouseLeave={() => setActiveKey(0) } onMouseEnter={ () => setActiveKey(5)}>Cuidamos tu bolsillo</div>} showArrow={false}> <p>Buscamos maximizar el precio de la venta de tu vehículo para <span>tu beneficio,</span> con un servicio costo efectivo.</p>
                                 </Collapse.Panel>
-                                <Collapse.Panel key={3} header="Lo hacemos por ti" showArrow={false}>
-                                    <p>No tienes que contestar llamadas, correos ni preocuparte por mostrar el carro. Nosotros nos encargamos de <span>todo el proceso</span> de una manera segura, incluyendo la documentación.</p>
-                                </Collapse.Panel>
-                                <Collapse.Panel key={4} header="Facilitamos el negocio" showArrow={false}>
-                                    <p>Ofrecemos al cliente diferentes posibilidades de financiación y retomas para hacer la venta de tu vehículo mas <span>sencilla y rápida</span></p>
-                                </Collapse.Panel>
-                                <Collapse.Panel key={5} header="Cuidamos tu bolsillo" showArrow={false}>
-                                    <p>Buscamos maximizar el precio de la venta de tu vehículo para <span>tu beneficio,</span> con un servicio costo efectivo.</p>
-                                </Collapse.Panel>
-                            </Collapse>
-                        </div>
-                    </Card>
-                </Col>
-            </Row>
+                            </Collapse> 
+                        </div> 
+                    </Card> 
+                </Col> 
+            </Row> 
         </Container>
         :
         <Container>
