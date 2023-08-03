@@ -761,6 +761,42 @@ export const Styles = createGlobalStyle`
         padding: 8px 20px;
         .form-group1:first-child{
             max-width: 95%;
+            label{
+                display:block;
+            }
+            .ant-input-number{
+                width: 100%;
+                font-family: "AT Surt Regular";
+                font-size: 14px;
+                padding: 5px 2px;
+                text-align: left;
+                background: rgb(255, 255, 255);
+                font-weight: 400;
+                line-height: 1;
+                border: 1px solid rgb(127, 201, 234);
+                &:focused{
+                    border:none;
+                }
+            }
+        }
+        .g1{
+            label{
+                display:block;
+            }
+            .ant-input-number{
+                width: 100%;
+                font-family: "AT Surt Regular";
+                font-size: 14px;
+                padding: 5px 2px;
+                text-align: left;
+                background: rgb(255, 255, 255);
+                font-weight: 400;
+                line-height: 1;
+                border: 1px solid rgb(127, 201, 234);
+                &:focused{
+                    border:none;
+                }
+            }
         }
         .form-group{
             input{

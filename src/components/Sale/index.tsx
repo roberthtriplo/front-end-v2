@@ -35,28 +35,56 @@ const FormSale = () =>{
   
   useEffect(() => {
     MakeService.getAll().then((resp:any) =>{
-      setMarcas(resp?.data);
+      let marcas: any = [];
+      resp.data.forEach((element: any) => {
+        marcas.push({
+          value: element.id,
+          label: element.name
+        })
+      });
+      setMarcas(marcas);
     })
   }, [])
 
   const selectMarca = (value: any) =>{
     if(value !== ''){
       YearService.getYearByMake(parseInt(value)).then((resp: any) =>{
-        setAnhos(resp?.data);
+        let years: any = [];
+        resp.data.forEach((element: any) => {
+          years.push({
+            value: element.id,
+            label: element.name
+          })
+        });
+        setAnhos(years);
       })
     }
   }
   const selectAnho = (value: any)=>{
     if(value !== ''){
       ModelService.getModelsByYear(parseInt(value)).then((resp: any) =>{
-        setModelos(resp?.data);
+        let models: any = [];
+        resp.data.forEach((element: any) => {
+          models.push({
+            value: element.id,
+            label: element.name
+          })
+        });
+        setModelos(models);
       })
     }
   }
   const selectModelo = (value: any)=>{
     if(value !== ''){
       VersionService.getVersionsByModel(parseInt(value)).then((resp: any) =>{
-        setVersiones(resp?.data);
+        let versions: any = [];
+        resp.data.forEach((element: any) => {
+          versions.push({
+            value: element.id,
+            label: element.name
+          })
+        });
+        setVersiones(versions);
       })
     }
   }

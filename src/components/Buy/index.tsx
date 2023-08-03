@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { withTranslation } from "react-i18next";
 import { Container } from "./styles";
-import { Col, Dropdown, Input, MenuProps, Row, Select, Slider, Space, Typography} from "antd";
+import { Col, Dropdown, Input, MenuProps, Row, Select, Slider, Space, Typography, } from "antd";
 import CarsService from '../../services/carsService';
 import { Link } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
@@ -14,7 +14,9 @@ const Buy = () => {
   const [order, setOrder] = useState("");
   const [showMas, setShowMas] = useState(false);
   const moneyFormat = (value: any) => "$ "+new Intl.NumberFormat().format(value);
+  const moneyFormat2 = (value: any) => new Intl.NumberFormat().format(value);
   const kmFormat = (value: any) => new Intl.NumberFormat().format(value)+" KM";
+  const kmFormat2 = (value: any) => new Intl.NumberFormat().format(value);
   const [makeFilters, setMakeFilters] = useState<MenuProps['items']>();
   const [modelFilters, setModelFilters] = useState<MenuProps['items']>();
   const [typeFilters, setTypeFilters] = useState<MenuProps['items']>();
@@ -444,7 +446,8 @@ const Buy = () => {
   };
 
   const handleChangeKm = (value: any) => {
-    setValueKm(value );
+    console.log(value);
+    setValueKm(value);
     checkFiltros('km', value);
   };
 
@@ -640,17 +643,17 @@ const Buy = () => {
                   <Col span={12}>
                     <div className='form-group form-group1'>
                       <label>Desde</label>
-                      <Input type='number' value={ valuePrice[0] } className='form-control' prefix={<DollarOutlined />} />
+                      <Input value={ moneyFormat2(valuePrice[0]) } className='form-control' prefix={<DollarOutlined />} />
                     </div>
                   </Col>
                   <Col span={12}>
                     <div className='form-group'>
                       <label>Hasta</label>
-                      <Input type='number' value={ valuePrice[1] } className='form-control' prefix={<DollarOutlined />} />
+                      <Input value={ moneyFormat2(valuePrice[1]) } className='form-control' prefix={<DollarOutlined />} />
                     </div>
                   </Col>
                   <Col span={24}>
-                    <Slider range={{ draggableTrack: false }} min={0} max={ maxPrice } tooltip={{ formatter }} onChange={ handleChangePrice }
+                    <Slider range={{ draggableTrack: true }} min={0} max={ maxPrice } tooltip={{ formatter }} onChange={ handleChangePrice }
                             railStyle={{ backgroundColor: '#ff860080' }}    
                             defaultValue={ valuePrice }/>
                   </Col>                    
@@ -671,17 +674,17 @@ const Buy = () => {
                     <Col span={12}>
                       <div className='form-group form-group1'>
                         <label>Desde</label>
-                        <Input type='number' value={ valueKm[0] } className='form-control' prefix={ 'Km' } />
+                        <Input value={ kmFormat2(valueKm[0]) } className='form-control' prefix={ 'Km' } />
                       </div>
                     </Col>
                     <Col span={12}>
                       <div className='form-group'>
                         <label>Hasta</label>
-                        <Input type='number' value={ valueKm[1] } className='form-control' prefix={ 'Km' } />
+                        <Input value={ kmFormat2(valueKm[1]) } className='form-control' prefix={ 'Km' } />
                       </div>
                     </Col>
                     <Col span={24}>
-                    <Slider range={{ draggableTrack: false }} min={0} max={ maxKm } tooltip={{ formatter: formatterkm }} onChange={ handleChangeKm }
+                    <Slider range={{ draggableTrack: true }} min={0} max={ maxKm } tooltip={{ formatter: formatterkm }} onChange={ handleChangeKm }
                             railStyle={{ backgroundColor: '#ff860080' }}    
                             defaultValue={ valueKm }/>
                     </Col>                    
