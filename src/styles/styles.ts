@@ -839,9 +839,9 @@ export const Styles = createGlobalStyle`
         }
     }
     .d-mobile{
-        display:none;
+        display:none !important;;
         @media (max-width: 576px){
-            display:block;
+            display:block !important;
             .bg1{
                 background:url(/img/border_azul_mob.webp);
                 background-repeat:no-repeat;
@@ -898,10 +898,22 @@ export const Styles = createGlobalStyle`
             }
         }
     }
-    .d-desktop{
-        display:block;
+    .icon_menu{
+        display:none !important;;
         @media (max-width: 576px){
-            display:none;
+            display:block !important;
+        }
+    }
+    .d-desktop{
+        display:block !important;
+        @media (max-width: 576px){
+            display: none !important;
+        }
+    }
+    .d-desktop2{
+        display:inline-block !important;
+        @media (max-width: 576px){
+            display: none !important;
         }
     }
     .micon{
@@ -927,7 +939,7 @@ export const Styles = createGlobalStyle`
         .ant-drawer-content-wrapper{
             width:100% !important;
             .ant-drawer-content{
-                background:#ff8600;
+                background:transparent;
                 height: 600px;
 
                 .ant-drawer-body{
@@ -941,15 +953,15 @@ export const Styles = createGlobalStyle`
                         position: relative;
 
                         .d-desktop{
-                            display:block;
+                            display:block !important;
                             @media only screen and (max-width: 560px) {
-                                display:none;
+                                display:none !important;
                             }
                         }
                         .d-mobile{
-                            display:none;
+                            display:none !important;
                             @media only screen and (max-width: 560px) {
-                                display:block;
+                                display:block !important;
                             }
                         }
                         .redes{
