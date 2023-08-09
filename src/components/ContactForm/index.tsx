@@ -15,10 +15,10 @@ const Contact = () => {
             </picture>
           </div>
         </Col>
-        <Col xs={24}>
+        <Col xs={24} span={24} className="d-desktop">
           <Slide direction="left">          
             <div className="slider">
-            <img src="/img/aliados.webp" alt="Aliados Triplo" className='sticker'/>
+              <img src="/img/aliados.webp" alt="Aliados Triplo" className='sticker'/>
               <div className="slide-track">
                 <div className="slide">
                   <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
@@ -65,6 +65,143 @@ const Contact = () => {
               </div>
             </div>
           </Slide>
+        </Col>
+        <Col xs={24} className="d-mobile">
+          <div className="slider">
+            <img src="/img/aliados.webp" alt="Aliados Triplo" className='sticker'/>
+              <div className="slide-track s1">
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+              </div>
+              <div className="slide-track s2">
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+              </div>
+              <div className="slide-track s3">
+                <div className="slide">
+                    <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                    <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/colserauto.webp" alt="Colserauto Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/phenomenon.png" alt="Phenomenon"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/elperito.png" alt="El perito"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/busqo.png" alt="Busqo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/alfred.webp" alt="Alfred Triplo"/>
+                </div>
+                <div className="slide">
+                  <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
+                </div>
+              </div>
+          </div>
         </Col>
       </Row>
     </ContactContainer>

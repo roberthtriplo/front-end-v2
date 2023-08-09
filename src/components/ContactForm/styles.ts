@@ -60,9 +60,17 @@ export const ContactContainer = styled("div")`
           top: 43%;
           transform: translateY(-50%);
           height: 100px;
-          @media screen and (max-width: 576px){
-            top:48%;
-          }
+      }
+      .s1{
+        top:145px;
+      }
+
+      .s2{
+        top:400px;
+      }
+
+      .s3{
+        top:660px;
       }
       
       .slide {
@@ -77,7 +85,7 @@ export const ContactContainer = styled("div")`
           img{
               max-height: 100px;
               @media screen and (max-width: 576px){
-                max-height: 70px;
+                max-height: 45px;
               }
           }
       }

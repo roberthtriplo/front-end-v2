@@ -19,6 +19,7 @@ export const Container = styled("div")`
     background-repeat: no-repeat;
     background-size: auto;
     position: relative;
+
   }
   .prelative{
     position:relative;

@@ -78,7 +78,7 @@ const RightBlock = ({
         </div>
       </div>
       <div className="d-mobile">
-        <Row className="content">
+        <Row className="content bg1">
           <Col xs={24}>
             <h1>Usados, recomendados por amigos</h1>
             <p>Somos el amigo nerd que ama los carros y les gusta hablar de ellos.</p>
@@ -86,7 +86,7 @@ const RightBlock = ({
           <Col xs={24} className="text-center">
             <Button type="primary" className="btn1" onClick={ () => scrollTo('sale') }>Quiero Vender</Button>
             <Button type="primary" className="btn1" onClick={ () => scrollTo('buy') }>Quiero Comprar</Button>  
-            <img src="/img/border_azul_mob.webp" className="img-blue"/>
+            {/* <img src="/img/border_azul_mob.webp" className="img-blue"/> */}
           </Col>
         </Row>
       </div>

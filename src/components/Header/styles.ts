@@ -15,6 +15,9 @@ export const HeaderSection = styled("header")`
     align-items: center;
     text-align: center;
   }
+  .icon_menu_open{
+    display:none;
+  }
 `;
 
 export const LogoContainer = styled(Link)`

@@ -67,7 +67,7 @@ const BuyDetail = () => {
     const [cuotaMensual, setCuotaMensual] = useState(0);
     const [cuotaInicial, setCuotaInicial] = useState(0);
     const [maxPrecio, setMaxPrecio] = useState(0);
-    //const [seguro, setSeguro] = useState(0);
+    const [textC, setTextC] = useState("Copia y comparte el enlace");
     const [precio, setPrecio] = useState(0);
     const interes = 0.0190;
     
@@ -207,6 +207,10 @@ const BuyDetail = () => {
         }
     
         return result1;
+    }
+    const copyText = () =>{
+        navigator.clipboard.writeText(`https://triplo.com.co/comprar/carro/detalle/${id.id}`);
+        setTextC("Enlace copiado con éxito")
     }
 
   return (
@@ -449,8 +453,8 @@ const BuyDetail = () => {
                     <EmailShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id.id}>
                         <img className="icon1" src="/img/icons/mail.png" alt='Triplo Autos' />
                     </EmailShareButton>
-                    <Tooltip title="Copia y comparte el enlace" color={"#f50"} key={"#f50"}>
-                        <LinkOutlined onClick={() =>  navigator.clipboard.writeText(`https://triplo.com.co/comprar/carro/detalle/${id.id}`)} className='icon-sh' />
+                    <Tooltip title={textC} color={"#f50"} key={"#f50"}>
+                        <LinkOutlined onClick={ copyText } className='icon-sh' />
                     </Tooltip>
                     
                 </div>

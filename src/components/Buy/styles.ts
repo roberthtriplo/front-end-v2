@@ -22,6 +22,12 @@ export const Container = styled("div")`
       margin-top: 120px;
       width: 250px;
       margin-left: 80px;
+
+      @media (max-width: 576px){
+        margin-top: 20px;
+        width: 100px;
+        margin-left: 20px;
+      }
     }
   }
   .p80{

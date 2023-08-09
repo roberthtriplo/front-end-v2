@@ -841,12 +841,20 @@ export const Styles = createGlobalStyle`
     .d-mobile{
         display:none;
         @media (max-width: 576px){
-            display:inherit;
+            display:block;
+            .bg1{
+                background:url(/img/border_azul_mob.webp);
+                background-repeat:no-repeat;
+                background-position:bottom;
+            }
         }
         .content{
             position: absolute;
             top: 160px;
             padding: 0 40px;
+            .prelative{
+                position:relative;
+            }            
             h1{
                 color: #ffe8da;
                 font-family: MangoGrotesque-Bold;
@@ -865,7 +873,7 @@ export const Styles = createGlobalStyle`
 
             .text-center{
                 text-align:center;
-                margin-top:250px;
+                margin-top:270px;
                 .btn1{
                     border: none;
                     font-family: MangoGrotesque-Bold;
@@ -891,7 +899,7 @@ export const Styles = createGlobalStyle`
         }
     }
     .d-desktop{
-        display:inherit;
+        display:block;
         @media (max-width: 576px){
             display:none;
         }
@@ -902,4 +910,75 @@ export const Styles = createGlobalStyle`
             fill: rgb(255,232,218);
         }
     }
+    .menu_mobile{
+        .menu-bg{
+            height: 250vw;
+            -webkit-transform: translate3d(50%,-50%,0);
+            transform: translate3d(50%,-50%,0);
+            width: 250vw;
+            background:#ff8600;
+            border-radius: 100%;
+            font-size: 30px;
+            position: fixed;
+            right: 37px;
+            text-align: center;
+            top: 43px;
+        }
+        .ant-drawer-content-wrapper{
+            width:100% !important;
+            .ant-drawer-content{
+                background:#ff8600;
+                height: 600px;
+
+                .ant-drawer-body{
+                    display:block;
+                    #icon_menu_open{
+                        z-index:9;
+                        position:relative;
+                    }
+                    #header_top{
+                        z-index: 9;
+                        position: relative;
+
+                        .d-desktop{
+                            display:block;
+                            @media only screen and (max-width: 560px) {
+                                display:none;
+                            }
+                        }
+                        .d-mobile{
+                            display:none;
+                            @media only screen and (max-width: 560px) {
+                                display:block;
+                            }
+                        }
+                        .redes{
+                            .a1{
+                                margin-right:10px;
+                            }
+                            .a2{
+                                margin-left:10px;
+                            }
+                        }
+                        div{
+                            width:100%;
+                            margin:0;
+
+                            a, span{
+                                font-family: "MangoGrotesque-Bold";
+                                font-size:50px;
+
+                                svg{
+                                    width:40px;
+                                    height:40px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }    
+    }
+
 `;

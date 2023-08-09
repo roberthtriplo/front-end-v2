@@ -410,7 +410,7 @@ const Sale = () => {
   return (
     <Container id="sale">
       <Row>
-        <Col xs={24} md={20} className='prelative'>
+        <Col xs={24} md={20} className='prelative mauto'>
           <a onClick={ () => scrollTo('buy') }>Quiero comprar</a>
           <Tabs
             onChange={onChange}
