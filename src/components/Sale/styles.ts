@@ -10,6 +10,21 @@ export const Container = styled("div")`
   padding:30px 0;
   z-index:2;
   background-color:rgb(255, 244, 230);
+  .prelative{
+    position:relative;
+
+    a{
+      position: absolute;
+      left: 137px;
+      top: 0px;
+      z-index: 999;
+      font-size: 16px;
+      color: #7fc9ea;
+      font-family: "AT SURT MEDIUM";
+      border: solid 1px #ff8600;
+      padding: 8px 20px 6px 20px;
+    }
+  }
   .ant-tabs-nav{
     margin-bottom:0;
     &::before{
@@ -50,15 +65,38 @@ export const Container = styled("div")`
     background-repeat: no-repeat;
     background-size: auto;
     position: relative;
+    @media (max-width: 576px){
+      background-image:none;
+    }
     img{
       width:200px;
       margin-top: 100px;
       margin-left: 40px;
       z-index: 2;
       position: relative;
+      @media (max-width: 576px){
+        width: 120px;
+        margin-top: -130px;
+        margin-left: 10px;
+        display: inline;
+      }
+    }
+    .formVentas{
+      form{
+        @media (max-width: 576px){
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
     }
     .textos{
       max-width: 400px;
+      @media (max-width: 576px){
+        display: inline-block;
+        width: 200px;
+        padding-top: 48px;
+        margin-left: 17px;
+      }
       h1{
         color: #ffe8da;
         font-family: MangoGrotesque-Bold;
@@ -70,6 +108,13 @@ export const Container = styled("div")`
         text-align: left;
         z-index: 1;
         margin-bottom: 20px;
+        @media (max-width: 576px){
+          color: #001821;
+          font-size: 58px;
+          line-height: 58px;
+          margin-bottom: 0;
+          margin-left: 0;
+        }
       }
       p{
         color: #ffe8da;
@@ -78,6 +123,13 @@ export const Container = styled("div")`
         line-height: 22px;
         margin-left: 50px;
         text-align: left;
+        @media (max-width: 576px){
+          color: #001821;
+          font-size: 12px;
+          line-height: 2px;
+          margin-left:10px;
+          font-weight: 100;
+        }
       }
     }
   }  

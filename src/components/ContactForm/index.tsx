@@ -16,8 +16,7 @@ const Contact = () => {
           </div>
         </Col>
         <Col xs={24}>
-          <Slide direction="left">
-          
+          <Slide direction="left">          
             <div className="slider">
             <img src="/img/aliados.webp" alt="Aliados Triplo" className='sticker'/>
               <div className="slide-track">

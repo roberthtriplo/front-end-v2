@@ -73,7 +73,7 @@ const Header = ({ t }: any) => {
           <NotHidden>
             <MenuItem />
           </NotHidden>
-          <Burger onClick={showDrawer}>
+          <Burger onClick={showDrawer} className="micon">
             <Outline />
           </Burger>
         </Row>

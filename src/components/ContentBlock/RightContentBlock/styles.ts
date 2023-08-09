@@ -14,7 +14,9 @@ export const RightBlockContainer = styled("section")`
     bottom: 0px;
     left: 0px;
     z-index:99;
-
+    @media (max-width: 576px){
+      position:relative;
+    }
     .btn1{
       bottom: 50px;
       left: 80px;
@@ -71,15 +73,20 @@ export const RightBlockContainer = styled("section")`
       position: absolute;
       bottom: 60px;
       right:80px;
+      @media (max-width: 576px){
+        font-size: 70px;
+        line-height: 70px;
+        bottom: 450px;
+      }
     }
   }
-  @media only screen and (max-width: 1024px) {
+  /*@media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
 
   @media only screen and (max-width: 768px) {
     padding: 4rem 0 3rem;
-  }
+  }*/
 `;
 
 export const Content = styled("p")`

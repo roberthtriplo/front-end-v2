@@ -153,14 +153,14 @@ const FormSale = () =>{
 
   return(
     <Row className="bgSale">
-      <Col span={12}>
+      <Col span={12} xs={24} md={12}>
         <img src="/img/sticker.webp" alt='Triplo Autos' />
         <div className="textos">
           <h1>Si quieres vender</h1>
           <p>Ingresa los datos de tu vehículo</p>
         </div>
       </Col>
-      <Col span={12}>
+      <Col span={12} xs={24} md={12}>
         <div className="formVentas">
           <Form
             name="basic"
@@ -390,20 +390,28 @@ const Sale = () => {
       label: `Quiero vender`,
       children: <FormSale />,
     },
-    {
+    /*{
       key: '2',
       label: `Quiero comprar`,
       children: `Content of Tab Pane 2`,
-    }
+    }*/
   ];
   const onChange = (key: string) => {
     console.log(key);
   };
 
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Container id="sale">
       <Row>
-        <Col span={20} offset={2}>
+        <Col xs={24} md={20} className='prelative'>
+          <a onClick={ () => scrollTo('buy') }>Quiero comprar</a>
           <Tabs
             onChange={onChange}
             type="card"

@@ -4,7 +4,9 @@ export const ContactContainer = styled("div")`
   z-index: 2;
   position: relative;
   background-color:rgb(255, 244, 230);
-  background:url(/img/fondo_aliados.webp);
+  @media screen and (max-width: 576px){
+    padding:0;
+  }
   .mural{
     img{
       width:100%;
@@ -44,6 +46,12 @@ export const ContactContainer = styled("div")`
         0% { transform: translateX(0); }
         100% { transform: translateX(calc(-250px * 7))}
       }
+      @media screen and (max-width: 576px){
+        background:url(/img/fondo_aliados_mob.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 1100px;
+      }
       .slide-track {
           animation: scroll 40s linear infinite;
           display: flex;
@@ -52,6 +60,9 @@ export const ContactContainer = styled("div")`
           top: 43%;
           transform: translateY(-50%);
           height: 100px;
+          @media screen and (max-width: 576px){
+            top:48%;
+          }
       }
       
       .slide {
@@ -65,12 +76,11 @@ export const ContactContainer = styled("div")`
           text-align: center;
           img{
               max-height: 100px;
+              @media screen and (max-width: 576px){
+                max-height: 70px;
+              }
           }
       }
-  }
-
-  @media only screen and (max-width: 1024px) {
-    padding: 3rem 0;
   }
 `;
 

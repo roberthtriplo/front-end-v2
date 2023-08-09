@@ -26,6 +26,9 @@ export const Container = styled("div")`
     max-width: 1000px;
     text-align:center;
     padding-top:20px;
+    @media screen and (max-width: 576px){
+      padding-bottom:20px;
+    }
     h1{
       font-family: 'MangoGrotesque-Bold';
       font-size: 100px;
@@ -36,14 +39,7 @@ export const Container = styled("div")`
           font-size: 36px;
           line-height: 32px;
       }
-      @media (min-width: 576px) and (max-width: 768px) {
-          font-size: 65px;
-          line-height: 68px;
-      }
-      @media (min-width: 768px) and (max-width: 992px){
-          font-size: 60px;
-          line-height: 60px;
-      }
+
     }
     p{
         font-family: 'AT Surt Regular';
@@ -51,25 +47,10 @@ export const Container = styled("div")`
         font-size: 25px;
         font-weight: bold;
         @media (max-width: 576px){
-            color: $text-menu-triplo;
-            max-width: 50%;
+            color: #ffe8da;
+            max-width: 65%;
             margin: 0 auto;
             font-size: 13px;
-        }
-        @media (min-width: 576px) and (max-width: 768px) {
-            max-width: 50%;
-            margin: 0 auto;
-            font-size: 20px;
-        }
-        @media (min-width: 768px) and (max-width: 992px){
-            font-size: 18px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        @media (min-width: 992px) and (max-width: 1200px){
-            font-size: 25px;
-            max-width: 440px;
-            margin: 0 auto;
         }
     }
     img{
@@ -78,22 +59,12 @@ export const Container = styled("div")`
       left: 0;
       top: 95px;
       @media (max-width: 576px){
-          width: 75px;
-          left: 20px;
-          top: 50px;
+        width: 55px;
+        left: 3px;
+        top: 44px;
+    
       }
-      @media (min-width: 576px) and (max-width: 768px) {
-          width: 130px;
-          position: absolute;
-          left: 50px;
-          top: 80px;
-      }
-      @media (min-width: 768px) and (max-width: 992px){
-          width: 120px;
-          left: 50px;
-          top: 71px;
-      }
-  }
+    }
   }
 `;
 

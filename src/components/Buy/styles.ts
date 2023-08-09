@@ -15,7 +15,9 @@ export const Container = styled("div")`
     height: 500px;
     position: relative;
     width: 100%;
-
+    @media (max-width: 576px){
+      height: 170px;
+    }
     img{
       margin-top: 120px;
       width: 250px;
@@ -25,6 +27,10 @@ export const Container = styled("div")`
   .p80{
     padding-left:80px;
     padding-right:80px;
+    @media (max-width: 576px){
+      padding-left:20px;
+      padding-right:20px;
+    }
     .pfilter-sel{
         max-width: max-content;
         background: #c14717;
@@ -74,6 +80,10 @@ export const Container = styled("div")`
       text-align: right;
       padding-right: 15px;
       .select-order{
+        @media (max-width: 576px){
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
         .ant-select-selector{
           background: #c14717;
           border-color: #c14717;
@@ -112,6 +122,13 @@ export const Container = styled("div")`
       &::-webkit-scrollbar{
         display: none;
       }
+      @media screen and (max-width: 768px){
+        -webkit-box-orient: vertical;
+        border: none;
+        display: flex;
+        overflow-x: auto;
+        padding: 10px 0;
+      }
       .fc-filtros{
         min-width: fit-content;
         margin-right: 25px;
@@ -120,6 +137,11 @@ export const Container = styled("div")`
           font-family: AT Surt Regular;
           font-size: 20px;
           padding: 6px 8px 6px 8px;
+          @media screen and (max-width: 768px){
+            border: 1px solid #c14717;
+            border-radius: 20px!important;
+            font-size: 16px;
+          }
         }
         .ant-dropdown-open{
           background:#7fc9ea;
@@ -151,6 +173,10 @@ export const Container = styled("div")`
       margin: 0;
       color: rgb(255, 244, 230);
       font-weight: 100;
+      @media (max-width: 576px){
+        font-size: 48px;
+        line-height: 42px;
+      }
     }
     h3{
       font-family: MangoGrotesque-Regular;
@@ -168,6 +194,12 @@ export const Container = styled("div")`
       line-height: 26px;
       margin-bottom: 25px;
       margin-left: 15px;
+      @media (max-width: 576px){
+        font-size: 13px;
+        line-height: 12px;
+        margin-bottom: 19px;
+        margin-left: 6px;
+      }
     }
     .img-wrap{
       cursor: pointer;

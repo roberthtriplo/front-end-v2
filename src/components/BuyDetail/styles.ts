@@ -158,6 +158,15 @@ export const Container = styled("div")`
             line-height: 33px;
             color: #ffe8da;
         }
+        .icon-sh{
+            margin-left:25px;
+            svg{
+                width: 34px;
+                height: 34px;
+                color: #ff8600;
+                cursor:pointer;
+            }
+        }
     }
     .minicard{
         background-color: #434A4B;    

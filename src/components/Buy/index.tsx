@@ -521,16 +521,16 @@ const Buy = () => {
   return (
     <Container id="buy">
       <Row className="bg">
-        <Col span={24}>
+        <Col span={24} xs={24} md={24}>
           <img alt="Triplo Autos" src="/img/logo.webp" />
         </Col>
       </Row>
       <Row className="p80">
-        <Col span={12}>
+        <Col span={12} xs={24} md={12}>
           <h1 className="titleh1">"COOL CARS FOR COOL KIDS"</h1>
           <p className="subtitle">Escoge el tuyo</p>
         </Col>
-        <Col span={12} className='text-end'>
+        <Col span={12} xs={24} md={12} className='text-end'>
           <Select className='select-order' defaultValue=""
             style={{ width: 145 }} popupClassName='dropdwon-order' onChange={orderBy}
             value={order}

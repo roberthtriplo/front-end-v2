@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Container } from "./styles";
-import { Button, Card, Col, Collapse, Form, Input, Modal, Row, Slider } from "antd";
+import { Button, Card, Col, Collapse, Form, Input, Modal, Row, Slider, Tooltip  } from "antd";
 import CarsService from "../../services/carsService";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +14,7 @@ import React from 'react';
 import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
 import TwilioService from '../../services/twilioService';
+import { LinkOutlined } from '@ant-design/icons';
 
 function PaymentForm (props: any) {
     const paymentForm: any = React.useRef(null);
@@ -439,15 +440,19 @@ const BuyDetail = () => {
             <Col span={24}>
                 <div className="form-group ff1">
                     <label>Compartir: </label>
-                    <WhatsappShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id}>
+                    <WhatsappShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id.id}>
                         <img className="icon1" src="/img/icons/what.png" alt='Triplo Autos' />    
                     </WhatsappShareButton>
-                    <FacebookShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id}>
+                    <FacebookShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id.id}>
                         <img className="icon1" src="/img/icons/face.png" alt='Triplo Autos' />
                     </FacebookShareButton>
-                    <EmailShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id}>
+                    <EmailShareButton title={ car ? (car.make +' '+car.model+' '+car.version) : ''} url={"https://triplo.com.co/comprar/carro/detalle/"+id.id}>
                         <img className="icon1" src="/img/icons/mail.png" alt='Triplo Autos' />
                     </EmailShareButton>
+                    <Tooltip title="Copia y comparte el enlace" color={"#f50"} key={"#f50"}>
+                        <LinkOutlined onClick={() =>  navigator.clipboard.writeText(`https://triplo.com.co/comprar/carro/detalle/${id.id}`)} className='icon-sh' />
+                    </Tooltip>
+                    
                 </div>
             </Col>
         </Row>

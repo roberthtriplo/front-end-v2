@@ -8,7 +8,9 @@ export const HeaderSection = styled("header")`
   padding: 1rem 80px;
   background: linear-gradient(rgba(35,31,32,.7),hsla(0,0%,100%,0));
   border-bottom: 2px solid #ffe8da;
-
+  @media (max-width: 576px){
+    padding: 17px 20px;
+  }
   .ant-row-space-between {
     align-items: center;
     text-align: center;

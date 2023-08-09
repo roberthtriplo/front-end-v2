@@ -10,6 +10,9 @@ export const FooterSection = styled("footer")`
   padding-top: 20px;
   z-index: 2;
   position: relative;
+  @media screen and (max-width: 576px){
+    padding-bottom: 0px;
+  }
 
   h1{
     color: #001821;
@@ -20,6 +23,9 @@ export const FooterSection = styled("footer")`
     margin-top: 100px;
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
+    @media screen and (max-width: 576px){
+      font-size: 80px;
+    }
   }
   p{
     color: #ff8600;
@@ -30,6 +36,10 @@ export const FooterSection = styled("footer")`
     margin-top: -30px;
     -webkit-transform: rotate(-10deg);
     transform: rotate(-10deg);
+    @media screen and (max-width: 576px){
+      font-size: 18px;
+      margin-top: 0px;
+    }
   }
 `;
 
@@ -74,18 +84,24 @@ export const Extra = styled("section")`
       font-weight: 700;
       text-decoration: none;
       font-size: 20px;
+      @media screen and (max-width: 576px){
+        font-size:16px;
+      }
     }
   }
 
   .pfooter{
-    padding-right:80px;
-    padding-left:80px;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding: 20px 80px;
+    @media screen and (max-width: 576px){
+      padding: 20px 0px;
+    }
     p{
       color: #001821;
       font-family: AT Surt Regular;
       font-size: 16px;
+      @media screen and (max-width: 576px){
+        font-size:12px;
+      }
     }
     .text-end{
       text-align:right;
@@ -95,6 +111,9 @@ export const Extra = styled("section")`
         font-size: 16px;
         margin:0;
         cursor:pointer;
+        @media screen and (max-width: 576px){
+          font-size:12px;
+        }
       }
     }
   }

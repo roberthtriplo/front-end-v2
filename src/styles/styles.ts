@@ -838,4 +838,68 @@ export const Styles = createGlobalStyle`
             margin-top: -7px;
         }
     }
+    .d-mobile{
+        display:none;
+        @media (max-width: 576px){
+            display:inherit;
+        }
+        .content{
+            position: absolute;
+            top: 160px;
+            padding: 0 40px;
+            h1{
+                color: #ffe8da;
+                font-family: MangoGrotesque-Bold;
+                font-size: 70px;
+                line-height: 60px;
+                margin: 0;
+                text-align: right;
+            }
+            p{
+                color: #ffe8da;
+                font-family: AT Surt DemiBold;
+                font-size: 20px;
+                margin-top: 12px;
+                text-align: center;
+            }
+
+            .text-center{
+                text-align:center;
+                margin-top:250px;
+                .btn1{
+                    border: none;
+                    font-family: MangoGrotesque-Bold;
+                    font-size: 38px;
+                    height: 65px;
+                    margin-bottom: 20px;
+                    width: 260px;
+                    background:rgb(239, 239, 239);
+                    z-index:2;
+                    span{
+                        color: #001821;
+                        font-size: 38px;
+                        line-height: 38px;
+                    }
+                }
+                .img-blue{
+                    position: absolute;
+                    left: -40px;
+                    top: -80px;  
+                    z-index:1;              
+                }
+            }
+        }
+    }
+    .d-desktop{
+        display:inherit;
+        @media (max-width: 576px){
+            display:none;
+        }
+    }
+    .micon{
+        svg{
+            color: rgb(255,232,218);
+            fill: rgb(255,232,218);
+        }
+    }
 `;
