@@ -73,7 +73,10 @@ export const Extra = styled("section")`
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 2rem;
-
+  @media screen and (max-width: 576px){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .text-center{
     text-align:center;
 

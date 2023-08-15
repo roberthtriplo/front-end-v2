@@ -6,21 +6,8 @@ import {
   RightBlockContainer,
 } from "./styles";
 
-const contentStyle: React.CSSProperties = {
-  margin: 0,
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
 
 const RightBlock = ({
-  title,
-  content,
-  button,
-  icon,
-  t,
   id,
 }: ContentBlockProps) => {
   const scrollTo = (id: string) => {
@@ -29,12 +16,22 @@ const RightBlock = ({
       behavior: "smooth",
     });
   };
+  const changeCarousel = (current: number) =>{
+    let _par: any = document.getElementById("text2");
+    if(_par){
+      if(current === 2){
+        _par.style.color = "#001821";
+      }else{
+        _par.style.color = "#ffe8da";
+      }
+    }
+  }
   return (
     <RightBlockContainer className="header_home">
       <Fade direction="right">
         <Row id={id}>
           <Col span={24}>
-            <Carousel autoplay effect="fade" dots={false} autoplaySpeed={10000}>
+            <Carousel autoplay effect="scrollx" dots={false} autoplaySpeed={10000} afterChange={ changeCarousel }>
               <div>
                 <picture>
                   <source media="(min-width:576px)" srcSet="/img/slider/foto1.webp" />
@@ -81,7 +78,7 @@ const RightBlock = ({
         <Row className="content bg1">
           <Col xs={24}>
             <h1>Usados, recomendados por amigos</h1>
-            <p>Somos el amigo nerd que ama los carros y les gusta hablar de ellos.</p>
+            <p id="text2">Somos el amigo nerd que ama los carros y les gusta hablar de ellos.</p>
           </Col>
           <Col xs={24} className="text-center">
             <Button type="primary" className="btn1" onClick={ () => scrollTo('sale') }>Quiero Vender</Button>

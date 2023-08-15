@@ -12,6 +12,9 @@ export const Container = styled("div")`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        @media screen and (max-width: 576px){
+            height: 25vh;
+        }
     }
 
     .row2{
@@ -23,6 +26,11 @@ export const Container = styled("div")`
             top: -100px;
             left: 100px;
             cursor:pointer;
+            @media screen and (max-width: 576px){
+                left:25px;
+                top:-50px;
+                width:100px;
+            }
         }
         h2{
             font-family: "MangoGrotesque-Bold";
@@ -30,11 +38,18 @@ export const Container = styled("div")`
             font-size: 60px;
             margin-top: 120px;
             margin-bottom: 20px;
+            @media screen and (max-width: 576px){
+                margin-top: 60px;
+                font-size: 30px;
+            }
         }
         p{
             font-family: 'AT Surt Regular';
             font-size: 18px;
             color: #6c757d;
+            @media screen and (max-width: 576px){
+                font-size:16px;
+            }
             span{
                 color: #ff8600;
             }

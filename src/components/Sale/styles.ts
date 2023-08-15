@@ -26,6 +26,9 @@ export const Container = styled("div")`
       font-family: "AT SURT MEDIUM";
       border: solid 1px #ff8600;
       padding: 8px 20px 6px 20px;
+      @media (max-width: 576px){
+        border-bottom: 0;
+      }
     }
   }
   .ant-tabs-nav{

@@ -247,21 +247,21 @@ const BuyDetail = () => {
                 </div>
             </Col>
             <Col span={8}>
-                <div className='form-group'>
+                <div className='form-group lcenter'>
                     <label>Inicial</label>
-                    <p>{ moneyFormat(cuotaInicial) }</p>
+                    <p className='tcenter'>{ moneyFormat(cuotaInicial) }</p>
                 </div>
             </Col>
             <Col span={8}>
-                <div className='form-group'>
+                <div className='form-group lcenter'>
                     <label>Nro de cuotas</label>
-                    <p>{ cuotaValue }</p>
+                    <p className='tcenter'>{ cuotaValue }</p>
                 </div>
             </Col>            
             <Col span={8}>
-                <div className='form-group'>
+                <div className='form-group lcenter'>
                     <label>Cuota mensual</label>
-                    <p>{ moneyFormat(cuotaMensual) }</p>
+                    <p className='tcenter'>{ moneyFormat(cuotaMensual) }</p>
                 </div>
             </Col>
             <Col span={24}>
@@ -276,7 +276,7 @@ const BuyDetail = () => {
                                 autoComplete="off"
                                 requiredMark={false}>
                                 <Row>
-                                    <Col span={12}>
+                                    <Col span={12} xs={24} md={12}>
                                         <Form.Item
                                             label="Nombre(s) y Apellido(s)"
                                             name="nombres"
@@ -287,7 +287,7 @@ const BuyDetail = () => {
                                             <Input  />
                                         </Form.Item>
                                     </Col>
-                                    <Col span={12}>
+                                    <Col span={12} xs={24} md={12}>
                                         <Form.Item
                                             label="Correo electrónico"
                                             name="correo"
@@ -300,7 +300,7 @@ const BuyDetail = () => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col span={8}>
+                                    <Col span={8} xs={24} md={8}>
                                         <Form.Item
                                             label="Cédula"
                                             name="cedula"
@@ -310,7 +310,7 @@ const BuyDetail = () => {
                                             <Input type="number"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col span={8}>
+                                    <Col span={8} xs={24} md={8}>
                                         <Form.Item
                                             label="Celular"
                                             name="celular"
@@ -321,7 +321,7 @@ const BuyDetail = () => {
                                             <Input type="number"/>
                                         </Form.Item>
                                     </Col>
-                                    <Col span={8}>
+                                    <Col span={8} xs={24} md={8}>
                                         <Form.Item
                                             label="Ciudad"
                                             name="ciudad"
@@ -355,18 +355,18 @@ const BuyDetail = () => {
             <Col span={24}>
                 <Card className='card-custom'>
                     <Row>
-                        <Col xs={12} className='text-start'>
+                        <Col xs={24} md={12} className='text-start'>
                             <h1>{ car.make +' '+car.model+' '+car.version }</h1>
                             <p>{ car.year }</p>
                         </Col>
-                        <Col xs={12} className='text-end'>
+                        <Col xs={24} md={12} className='text-end te-mo'>
                             <p>Precio</p>
                             <h2>{ moneyFormat(car.price) }</h2>
                             <p>Descuento disponible</p>
                         </Col>
                     </Row>
                     <Row className='mt-30'>
-                        <Col span={12} className='border-r'>
+                        <Col span={12} xs={24} md={12} className='border-r'>
                             <Row className='mb25'>
                                 <Col span={12}>
                                     <div className='caracteristica'>
@@ -428,13 +428,13 @@ const BuyDetail = () => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col span={6} className='text-center border-r'>
+                        <Col span={6} xs={24} md={6} className='text-center border-r'>
                             <p>Cuotas mensuales de</p>
                             <h2>{ moneyFormat(car.price) }</h2>
                             <a onClick={ showSimulador } className='lk'>Ingresar al simulador</a>
                             <a href="https://www.busqo.com/campanas/TriploVh/seguro-carro" target='_blank' className='btn-cotiza'>Cotizar seguro de mi vehículo</a>
                         </Col>
-                        <Col span={6} className='text-center'>
+                        <Col span={6} xs={24} md={6} className='text-center'>
                             <p className='pasesor'>Ponte en contacto con un asesor</p>
                             <img src="/img/icons/icon_what.webp" onClick={goWs} className="img-fluid icon-what" alt="Car #1" />  
                         </Col>
@@ -472,13 +472,13 @@ const BuyDetail = () => {
                     <p>Este vehículo ya se encuentra <span>separado</span></p>
                 </Col> :
                 <>
-                    <Col span={12} className='text-center'>
+                    <Col span={12} xs={24} md={24} className='text-center'>
                         <button className="btn btn-tipo2" onMouseEnter={showMinicard} onMouseLeave={noShowMinicard} onClick={ showPago }>Separar el carro</button>
                         <div className="minicard minicard-1">
                             <p>¡<span>Asegura</span> el carro de tus sueños y evita que alguien más se quede con él! Reservalo con <span>$1.000.000</span> y en caso de que te arrepientas realizamos la devolución del <span>100%</span></p>
                         </div>
                     </Col>
-                    <Col span={12} className='text-center'>
+                    <Col span={12} xs={24} md={24} className='text-center'>
                         <button className="btn btn-tipo2" onMouseEnter={showMinicard2} onMouseLeave={noShowMinicard2} onClick={ showCita }>Agendar cita</button>
                         <div className="minicard minicard-2">
                             <p><span>Agenda</span> tu cita con uno de nuestros asesores y conoce pronto tu <span>nuevo vehículo</span></p>
@@ -488,7 +488,7 @@ const BuyDetail = () => {
             }
         </Row>
         <Row>
-            <Col xs={24}>
+            <Col xs={24} md={24}>
                 <div className="slider">
                     <div className="slide-track">
                         <div className="slide">
@@ -528,12 +528,12 @@ const BuyDetail = () => {
             </Col>
         </Row>
         <Row className='ccontainer my-3'>
-            <Col span={12} className='description'>
+            <Col span={12} xs={24} md={12} className='description'>
                 {
                     car.description !== '' ? <div id="description-car"></div> : ''
                 }
             </Col>
-            <Col span={12}>
+            <Col span={12} xs={24} md={12} className='d-desktop'>
                 <div className="bgDesc"></div>
             </Col>
         </Row>
@@ -542,7 +542,7 @@ const BuyDetail = () => {
             {
                 slides.map(
                     (item, index) => (
-                        <Col span={12} className='ma-2'>
+                        <Col span={12} xs={24} md={12} className='ma-2'>
                             <Item
                                 original={item}
                                 thumbnail={item}

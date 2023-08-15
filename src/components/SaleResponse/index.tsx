@@ -9,17 +9,17 @@ const SaleResponse = () => {
     
     useEffect(() => {
         let idCar: any = localStorage.getItem("car_id_wompi") ? localStorage.getItem("car_id_wompi") : 0; 
-        CarsService.getById(parseInt(idCar)).then((data: any) => {
-            setLink('https://api.whatsapp.com/send?phone=573143781090&text=%C2%A1Hola%20Triplo!%20Quiero%20acelerar%20el%20proceso%20de%20compra%20del%20veh%C3%ADculo:%20'+data.cars[0].link_ml+'%20');
-            let _data = {
-                id: idCar,
-                value: 1
-            }
-            CarsService.updateSeparate(_data).then(resp =>{
-                console.log("Done");
-                localStorage.removeItem("car_id_wompi");
-            })
-        }).catch(error => console.log(error));
+        // CarsService.getById(parseInt(idCar)).then((data: any) => {
+        //     setLink('https://api.whatsapp.com/send?phone=573143781090&text=%C2%A1Hola%20Triplo!%20Quiero%20acelerar%20el%20proceso%20de%20compra%20del%20veh%C3%ADculo:%20'+data.cars[0].link_ml+'%20');
+        //     let _data = {
+        //         id: idCar,
+        //         value: 1
+        //     }
+        //     CarsService.updateSeparate(_data).then(resp =>{
+        //         console.log("Done");
+        //         localStorage.removeItem("car_id_wompi");
+        //     })
+        // }).catch(error => console.log(error));
     }, [])
     
     const goHome = () =>{

@@ -6,7 +6,8 @@ export const RightBlockContainer = styled("section")`
   margin-top:-114px;
   height: 100vh;
   @media (max-width: 576px){
-    height:auto;
+    height:100vh;
+    margin-bottom:50px;
   }
   .img_slider{
     width:100%;

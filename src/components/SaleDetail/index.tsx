@@ -55,19 +55,23 @@ const SaleDetail = () => {
         !showResult ?  
         <Container>
             <Row className="row1" id="headerSales">
-                <Col span={24}>
+                <Col span={24} xs={24} md={24}>
                     <img src="/img/sticker_result_2.webp" id="imgTP1"  alt="Triplo, Ventas, Compras, Colombia Bogota" className="imgSticker" onClick={ goHome }/> 
                     {/* <div className="bg_header d-none d-sm-block" id="headerSales"></div> */}
                 </Col> 
-                <Col span={24}> 
+                <Col span={24} className="text-right d-mobile d-mobile-3">
+                    <p className="tit1">ELIGE TU OPCIÓN</p>
+                    <p className="tit2">FAVORITA</p>
+                </Col>
+                <Col span={24} className="d-desktop"> 
                     <p className="p1">ELIGE TU OPCIÓN</p> 
                 </Col> 
             </Row> 
-            <Row className="row2"> 
+            <Row className="row2 d-desktop" > 
                 <Col span={24}> <p className="p1">FAVORITA</p> </Col> 
             </Row> 
-            <Row className="row3"> 
-                <Col span= {12} className="text-center"> 
+            <Row className="row3 d-desktop"> 
+                <Col span={12} xs={24} md={12} className="text-center"> 
                     <Card className="card-custom directa" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('directa') }> 
                         <img src="/img/conocer_oferta.webp" alt="Triplo Autos"  onClick={() => goResult('directa') }/> 
                         <div className="cbody"> 
@@ -81,11 +85,13 @@ const SaleDetail = () => {
                         </div> 
                     </Card> 
                 </Col> 
-                <Col span={12} className="text-center"> 
+                <Col span={12} xs={24} md={12} className="text-center"> 
                     <Card className="card-custom consignacion" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('consignacion') }> 
                         <img src="/img/conocer_consignacion.webp" alt="Triplo Autos" onClick={() => goResult('consignacion') }/> 
-                        <div className="cbody"> <h1>Consignación</h1> <h5>Nos encargamos de todo en la venta de tu vehículo</h5>
-                            <Collapse accordion activeKey={activeKey}> 
+                        <div className="cbody"> 
+                            <h1>Consignación</h1> 
+                            <h5>Nos encargamos de todo en la venta de tu vehículo</h5>
+                            <Collapse accordion activeKey={activeKey} className="d-desktop"> 
                                 <Collapse.Panel key={1} header={<div onMouseLeave={() => setActiveKey(0) } onMouseEnter={ () => setActiveKey(1)}>Fotos profesionales</div>} showArrow={false}>
                                     <p>Nos aseguramos de crear una publicación, <span>totalmente gratis,</span> con altos estándares de diseño y fotografia, detallando fuertemente tu vehículo.</p> 
                                 </Collapse.Panel> 
@@ -105,11 +111,51 @@ const SaleDetail = () => {
                     </Card> 
                 </Col> 
             </Row> 
+            <Row className="row3 d-mobile"> 
+                <Col span={12} xs={24} md={12} className="text-center"> 
+                    <Card className="card-custom directa"> 
+                        <img src="/img/conocer_oferta.webp" alt="Triplo Autos"  onClick={() => goResult('directa') }/> 
+                        <div className="cbody"> 
+                            <h1>Te lo compramos en tiempo record</h1> 
+                            <h5 className="mostaza">Venta directa</h5> 
+                            <ul> 
+                                <li> <h2>Precio preliminar en línea</h2> <p>Obtén un precio preliminar de  inmediato</p> </li> 
+                                <li> <h2>Peritaje</h2> <p>La revisión va por nuestra cuenta. Solo sigue las  instrucciones para agendarla.</p> </li> 
+                                <li> <h2>Documentación</h2> <p>¡Validamos el precio y listo!  Nos encargamos de toda la documentación necesaria y recibes el pago hasta en el mismo día.</p> </li>
+                            </ul> 
+                        </div> 
+                    </Card> 
+                </Col> 
+                <Col span={12} xs={24} md={12} className="text-center"> 
+                    <Card className="card-custom consignacion"> 
+                        <img src="/img/conocer_consignacion.webp" alt="Triplo Autos" onClick={() => goResult('consignacion') }/> 
+                        <div className="cbody"> 
+                            <h1>Te ayudamos a venderlo al mejor precio</h1> 
+                            <h5 className="mostaza">Consignación</h5>                           
+                            <Collapse accordion className="d-mobile">
+                                <Collapse.Panel key={1} header="Fotos profesionales">
+                                    <p>Nos aseguramos de crear una publicación, <span>totalmente gratis,</span> con altos estándares de diseño y fotografia, detallando fuertemente tu vehículo.</p> 
+                                </Collapse.Panel>
+                                <Collapse.Panel key={2} header="Red de contactos"> 
+                                    <p>Aprovecha nuestra amplia red de contactos en la industria. Es probable que tengamos <span>listo un cliente</span> para tu vehículo.</p> 
+                                </Collapse.Panel> 
+                                <Collapse.Panel key={3} header="Lo hacemos por ti"> <p>No tienes que contestar llamadas, correos ni preocuparte por mostrar el carro. Nosotros nos encargamos de <span>todo el proceso</span> de una manera segura, incluyendo la documentación.</p> 
+                                </Collapse.Panel> 
+                                <Collapse.Panel key={4} header="Facilitamos el negocio"> <p>Ofrecemos al cliente diferentes posibilidades de financiación y retomas para hacer la venta de tu vehículo mas <span>sencilla y rápida</span></p>
+                                </Collapse.Panel>
+                                <Collapse.Panel key={5} header="Cuidamos tu bolsillo"> <p>Buscamos maximizar el precio de la venta de tu vehículo para <span>tu beneficio,</span> con un servicio costo efectivo.</p>
+                                </Collapse.Panel>
+                            </Collapse> 
+                        </div> 
+                    </Card> 
+                </Col> 
+            </Row> 
         </Container>
         :
         <Container>
             <Row className="superior">
-                <Col offset={9} span={8}>
+                <Col span={9} md={9} xs={1}></Col>
+                <Col span={8} md={8} xs={22}>
                     <p className='tit'>¡Ya casi llegas a la meta!</p> 
                     <div className='wc'>
                         <Lottie animationData={gifJson} height={240} width={'75%'}  />    
@@ -129,7 +175,7 @@ const SaleDetail = () => {
                 </Col>
             </Row>
             <Row className="custom-top">
-                <Col span={12} className="text-center c1">
+                <Col span={12} xs={24} md={12} className="text-center c1">
                     <img src="/img/sticker3.webp" className="img-sticker" alt="Triplo Autos" onClick={ goHome } />
                     <img src="/img/ninas.webp" className="img-ninas" alt="Triplo Autos"/>
                 </Col>

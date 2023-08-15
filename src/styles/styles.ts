@@ -850,7 +850,7 @@ export const Styles = createGlobalStyle`
         }
         .content{
             position: absolute;
-            top: 160px;
+            top: 174px;
             padding: 0 40px;
             .prelative{
                 position:relative;
@@ -992,5 +992,16 @@ export const Styles = createGlobalStyle`
             }
         }    
     }
-
+    .ant-modal-body{
+        @media only screen and (max-width: 560px) {
+            padding:12px;
+            .lcenter{
+                text-align:center;
+            }
+            .tcenter{
+                text-align:center;
+                font-size:14px;
+            }
+        }
+    }
 `;

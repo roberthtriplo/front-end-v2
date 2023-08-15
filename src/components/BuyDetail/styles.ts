@@ -28,6 +28,10 @@ export const Container = styled("div")`
         width: 250px;
         cursor: pointer;
         z-index: 2;
+        @media (max-width: 576px){
+            width: 200px;
+            left: -15px;
+        }
     }
     .icon1 {
         margin-left: 38px;
@@ -51,7 +55,10 @@ export const Container = styled("div")`
             font-family: "MangoGrotesque-Regular";
             font-size: 50px;
             cursor:pointer;
-
+            @media (max-width: 576px){
+                min-width: 350px;
+                margin-bottom:30px;
+            }
             @media (min-width:768px) and (max-width: 1400px){
                 min-width: 300px;
             }
@@ -68,7 +75,9 @@ export const Container = styled("div")`
         margin: auto;
         overflow: hidden;
         margin-top: 30px;
-        
+        @media (max-width: 576px){
+            margin-top:0;
+        }
     }
     
     .slider .slide-track2 {
@@ -147,11 +156,25 @@ export const Container = styled("div")`
         padding-bottom: 0px;
         font-family: 'At Surt SemiBold';
         color: #ffedd2;
+        #description-car{
+            @media (max-width: 576px){
+                margin-left:20px;
+                margin-right:20px;
+            }
+        }
     }
     .ff1{
         display: flex;
         align-items: center;
         margin-bottom:120px;
+        @media (max-width: 576px){
+            margin-left: 30px;
+            margin-right: auto;
+            margin-bottom:60px;
+            button{
+                width:65px;
+            }
+        }
         label{
             font-family: "MangoGrotesque-Regular";
             font-size: 33px;
@@ -200,7 +223,11 @@ export const Container = styled("div")`
         border: solid 3px #ff8600;
         border-radius:10px;
         margin: 250px auto 20px auto;
-
+        @media (max-width: 576px){
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-top:170px;
+        }
         h1{
             font-family: MangoGrotesque-Regular;
             font-size: 65px;
@@ -229,12 +256,20 @@ export const Container = styled("div")`
             max-width: 150px;
             font-family: "AT Surt DemiBold";
             font-size:16px;
+            @media (max-width: 576px){
+                margin-top: 20px;
+            }
         }
         .text-start{
             text-align:left;
         }
         .text-end{
             text-align:right;
+        }
+        .te-mo{
+            @media (max-width: 576px){
+                text-align:left;
+            }
         }
         .mt-30{
             margin-top:30px;
@@ -243,6 +278,9 @@ export const Container = styled("div")`
             max-width: 60px;
             margin-top: 20px;
             cursor: pointer;
+            @media (max-width: 576px){
+                margin-top:0;
+            }
         }
         .btn-cotiza{
             background-color: #ff6522;
@@ -273,8 +311,17 @@ export const Container = styled("div")`
         }
         .caracteristica{
             display:flex;
+            @media (max-width: 576px){
+                display: block;
+                text-align: center;
+            }
             img{
                 width:40px;
+                @media (max-width: 576px){
+                    width: auto;
+                    height: 40px;
+                    margin-bottom:10px;
+                }
             }
             p:last-child{
                 font-family: "AT Surt DemiBold";
@@ -283,6 +330,9 @@ export const Container = styled("div")`
             }
             div{
                 margin-left:20px;
+                @media (max-width: 576px){
+                    margin-left:0;
+                }
             }
         }
         .mb25{
@@ -290,6 +340,9 @@ export const Container = styled("div")`
         }
         .border-r{
             border-right: solid 2px #ff8600;
+            @media (max-width: 576px){
+                border:none;
+            }
         }
     }
     .my-3{
