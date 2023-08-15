@@ -77,6 +77,7 @@ const Team = () => {
               </picture>
             </div>
           </Carousel>
+          <p className="petiqueta">Algunos de los carros que hemos vendido</p>
         </Col>
       </Row>
     </Container>

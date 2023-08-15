@@ -14,6 +14,27 @@ export const Container = styled("div")`
       width: 100%;
     }
   }
+  .petiqueta{
+    max-width: max-content;
+    margin: 0;
+    background: rgba(0,24,33, 0.78);
+    padding: 5px 30px;
+    position: absolute;
+    bottom: 30px;
+    z-index: 9;
+    right: 40px;
+    font-family: 'AT Surt Light';   
+    font-size: 24px;
+    color: #FFE8DA;   
+    @media screen and (max-width: 540px){
+      padding: 3px 3px;
+      bottom: 25px;
+      right: 0;
+      font-size: 13px;
+      left: 0;
+      margin: 0 auto;
+    }
+  }
   .bg{
     background-image: url(/img/quienes_somos.webp);
     background-repeat: no-repeat;
