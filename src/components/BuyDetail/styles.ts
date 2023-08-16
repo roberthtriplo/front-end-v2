@@ -36,6 +36,10 @@ export const Container = styled("div")`
     .icon1 {
         margin-left: 38px;
         width: 38px;
+        @media (max-width: 576px){
+            margin-left: 10px;
+            width: 28px;
+        }
     }
     .ccontainer{
         max-width:1320px;
@@ -182,10 +186,10 @@ export const Container = styled("div")`
             color: #ffe8da;
         }
         .icon-sh{
-            margin-left:25px;
+            margin-left:12px;
             svg{
-                width: 34px;
-                height: 34px;
+                width: 28px;
+                height: 28px;
                 color: #ff8600;
                 cursor:pointer;
             }

@@ -70,7 +70,7 @@ const SaleDetail = () => {
             <Row className="row2 d-desktop" > 
                 <Col span={24}> <p className="p1">FAVORITA</p> </Col> 
             </Row> 
-            <Row className="row3 d-desktop"> 
+            <Row className="row3 d-desktop3"> 
                 <Col span={12} xs={24} md={12} className="text-center"> 
                     <Card className="card-custom directa" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('directa') }> 
                         <img src="/img/conocer_oferta.webp" alt="Triplo Autos"  onClick={() => goResult('directa') }/> 

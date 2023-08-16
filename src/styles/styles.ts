@@ -457,7 +457,7 @@ export const Styles = createGlobalStyle`
         background: #fff;
         overflow-x: hidden;
     }
-
+/*
     a:hover {
         color: #18216d;
     }
@@ -516,7 +516,7 @@ export const Styles = createGlobalStyle`
         :hover {
             color: #2e186a;
         }
-    }
+    }*/
     
     *:focus {
         outline: none;
@@ -728,6 +728,10 @@ export const Styles = createGlobalStyle`
             grid-template-columns: 33% 33% 33%;
             min-width: 500px;
             padding-top: 15px;
+            @media (max-width: 576px){
+                grid-template-columns: 50% 50%;
+                min-width: 320px;
+            }
             li{
                 border: 2px solid #7fc9ea;
                 border-radius: 20px;
@@ -759,6 +763,9 @@ export const Styles = createGlobalStyle`
         min-width: 500px;
         width: 500px;
         padding: 8px 20px;
+        @media (max-width: 576px){
+            width: 320px;
+        }
         .form-group1:first-child{
             max-width: 95%;
             label{
@@ -776,6 +783,9 @@ export const Styles = createGlobalStyle`
                 border: 1px solid rgb(127, 201, 234);
                 &:focused{
                     border:none;
+                }
+                @media (max-width: 576px){
+                    font-size: 12px;
                 }
             }
         }
@@ -795,6 +805,9 @@ export const Styles = createGlobalStyle`
                 border: 1px solid rgb(127, 201, 234);
                 &:focused{
                     border:none;
+                }
+                @media (max-width: 576px){
+                    font-size: 12px;
                 }
             }
         }
@@ -850,7 +863,7 @@ export const Styles = createGlobalStyle`
         }
         .content{
             position: absolute;
-            top: 174px;
+            bottom: 0;
             padding: 0 40px;
             .prelative{
                 position:relative;
@@ -873,7 +886,7 @@ export const Styles = createGlobalStyle`
 
             .text-center{
                 text-align:center;
-                margin-top:270px;
+                margin-top:150px;
                 .btn1{
                     border: none;
                     font-family: MangoGrotesque-Bold;
@@ -912,6 +925,12 @@ export const Styles = createGlobalStyle`
     }
     .d-desktop2{
         display:inline-block !important;
+        @media (max-width: 576px){
+            display: none !important;
+        }
+    }
+    .d-desktop3{
+        display:flex !important;
         @media (max-width: 576px){
             display: none !important;
         }

@@ -15,7 +15,7 @@ const Team = () => {
       </Row>
       <Row>
         <Col span={24}>
-          <Carousel effect="scrollx" autoplaySpeed={5000} autoplay className="cimages">
+          <Carousel effect="fade" autoplaySpeed={5000} autoplay className="cimages">
             <div>
               <picture>
                 <source media="(min-width:576px)" srcSet="/img/slider/1.webp" />

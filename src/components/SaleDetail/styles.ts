@@ -64,7 +64,7 @@ export const Container = styled("div")`
                     height: 40px;
                     position: absolute;
                     right: 0px;
-                    top: 220px;
+                    top: 190px;
                 }
             }
         }
@@ -152,7 +152,7 @@ export const Container = styled("div")`
     .d-mobile-3{
         @media screen and (max-width: 576px){
             text-align:right;
-            margin-top: -70px;
+            margin-top: -30px;
             padding-right: 30px;
             height:100px;
             .tit1{
@@ -251,7 +251,7 @@ export const Container = styled("div")`
             margin: 0 auto;
             border-color:transparent;
             @media screen and (max-width: 576px){
-                width:350px;
+                width:330px;
                 margin-bottom:70px;
                 height: 650px;
             }
@@ -293,7 +293,7 @@ export const Container = styled("div")`
                     text-align: center;
                     text-transform:uppercase;
                     @media screen and (max-width: 576px){
-                        font-size:60px;
+                        font-size:55px;
                         padding-top: 15px;
                         margin-bottom: 15px;
                     }
@@ -313,6 +313,9 @@ export const Container = styled("div")`
                     padding-left: 45px;
                     list-style: none;
                     margin-top: 40px;
+                    @media screen and (max-width: 576px){
+                        margin-top:20px;
+                    }
                 }
                 ul::before {
                     display: inline-block;

@@ -5,7 +5,9 @@ export const Container = styled("div")`
     width: 100%;
     padding-bottom:50px;
     height: 100vh;   
-
+    @media screen and (max-width: 576px){
+        padding-bottom:0px;
+    }
     .row1{
         height: 50vh;
         background: url('/img/bg_separacion.webp');
@@ -20,6 +22,9 @@ export const Container = styled("div")`
     .row2{
         height: 50vh;
         position:relative;
+        @media screen and (max-width: 576px){
+            height: 75vh;
+        }
         .st{
             position: absolute;
             width: 200px;
@@ -40,7 +45,7 @@ export const Container = styled("div")`
             margin-bottom: 20px;
             @media screen and (max-width: 576px){
                 margin-top: 60px;
-                font-size: 30px;
+                font-size: 28px;
             }
         }
         p{
@@ -49,6 +54,7 @@ export const Container = styled("div")`
             color: #6c757d;
             @media screen and (max-width: 576px){
                 font-size:16px;
+    
             }
             span{
                 color: #ff8600;

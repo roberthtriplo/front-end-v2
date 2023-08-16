@@ -113,7 +113,7 @@ const Contact = () => {
                   <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
                 </div>
               </div>
-              <div className="slide-track s2">
+              {/* <div className="slide-track s2">
                 <div className="slide">
                   <img src="/img/aliados/ballistic.png" alt="Ballistic"/>
                 </div>
@@ -200,7 +200,7 @@ const Contact = () => {
                 <div className="slide">
                   <img src="/img/aliados/mercadolibre.webp" alt="Mercado Libre Triplo"/>
                 </div>
-              </div>
+              </div> */}
           </div>
         </Col>
       </Row>

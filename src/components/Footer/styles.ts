@@ -12,6 +12,7 @@ export const FooterSection = styled("footer")`
   position: relative;
   @media screen and (max-width: 576px){
     padding-bottom: 0px;
+    padding-top:70px;
   }
 
   h1{
@@ -25,6 +26,7 @@ export const FooterSection = styled("footer")`
     transform: rotate(-10deg);
     @media screen and (max-width: 576px){
       font-size: 80px;
+      margin-top:0px;
     }
   }
   p{

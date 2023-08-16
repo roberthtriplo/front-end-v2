@@ -472,13 +472,13 @@ const BuyDetail = () => {
                     <p>Este vehículo ya se encuentra <span>separado</span></p>
                 </Col> :
                 <>
-                    <Col span={12} xs={24} md={24} className='text-center'>
+                    <Col span={12} xs={24} md={12} className='text-center'>
                         <button className="btn btn-tipo2" onMouseEnter={showMinicard} onMouseLeave={noShowMinicard} onClick={ showPago }>Separar el carro</button>
                         <div className="minicard minicard-1">
                             <p>¡<span>Asegura</span> el carro de tus sueños y evita que alguien más se quede con él! Reservalo con <span>$1.000.000</span> y en caso de que te arrepientas realizamos la devolución del <span>100%</span></p>
                         </div>
                     </Col>
-                    <Col span={12} xs={24} md={24} className='text-center'>
+                    <Col span={12} xs={24} md={12} className='text-center'>
                         <button className="btn btn-tipo2" onMouseEnter={showMinicard2} onMouseLeave={noShowMinicard2} onClick={ showCita }>Agendar cita</button>
                         <div className="minicard minicard-2">
                             <p><span>Agenda</span> tu cita con uno de nuestros asesores y conoce pronto tu <span>nuevo vehículo</span></p>

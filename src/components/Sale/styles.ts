@@ -10,6 +10,9 @@ export const Container = styled("div")`
   padding:30px 0;
   z-index:2;
   background-color:rgb(255, 244, 230);
+  @media (max-width: 576px){
+    margin-top:-12px;
+  }
   .mauto{
     margin: 0 auto;
   }

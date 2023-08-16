@@ -48,9 +48,9 @@ export const ContactContainer = styled("div")`
       }
       @media screen and (max-width: 576px){
         background:url(/img/fondo_aliados_mob.webp);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        height: 1100px;
+        height: 320px;
       }
       .slide-track {
           animation: scroll 40s linear infinite;
@@ -66,11 +66,11 @@ export const ContactContainer = styled("div")`
       }
 
       .s2{
-        top:400px;
+        top:380px;
       }
 
       .s3{
-        top:660px;
+        top:590px;
       }
       
       .slide {

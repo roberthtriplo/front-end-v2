@@ -31,7 +31,7 @@ const RightBlock = ({
       <Fade direction="right">
         <Row id={id}>
           <Col span={24}>
-            <Carousel autoplay effect="scrollx" dots={false} autoplaySpeed={10000} afterChange={ changeCarousel }>
+            <Carousel autoplay effect="fade" dots={false} autoplaySpeed={20000} afterChange={ changeCarousel }>
               <div>
                 <picture>
                   <source media="(min-width:576px)" srcSet="/img/slider/foto1.webp" />

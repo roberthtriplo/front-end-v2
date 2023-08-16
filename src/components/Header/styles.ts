@@ -18,6 +18,12 @@ export const HeaderSection = styled("header")`
   .icon_menu_open{
     display:none;
   }
+  .logoHome{
+    width:193px;
+    @media (max-width: 576px){
+      width:150px;
+    }
+  }
 `;
 
 export const LogoContainer = styled(Link)`
