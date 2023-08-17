@@ -50,7 +50,10 @@ export const Container = styled("div")`
     padding-top:20px;
     @media screen and (max-width: 576px){
       padding-bottom:20px;
-    }
+    }  
+    @media (min-width: 576px) and (max-width: 992px){
+      max-width:600px;
+    }  
     h1{
       font-family: 'MangoGrotesque-Bold';
       font-size: 100px;
@@ -58,8 +61,12 @@ export const Container = styled("div")`
       margin: 0 auto;
       color:#001821;
       @media screen and (max-width: 576px){
-          font-size: 36px;
-          line-height: 32px;
+        font-size: 36px;
+        line-height: 32px;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        font-size: 60px;
+        line-height: 62px;
       }
 
     }
@@ -74,6 +81,9 @@ export const Container = styled("div")`
             margin: 0 auto;
             font-size: 13px;
         }
+        @media (min-width: 576px) and (max-width: 992px){
+          font-size: 14px;
+        }
     }
     img{
       width: 145px;
@@ -84,7 +94,11 @@ export const Container = styled("div")`
         width: 55px;
         left: 3px;
         top: 44px;
-    
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        width: 90px;
+        left: 0px;
+        top: 68px;
       }
     }
   }

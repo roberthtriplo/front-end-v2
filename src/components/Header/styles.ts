@@ -11,6 +11,9 @@ export const HeaderSection = styled("header")`
   @media (max-width: 576px){
     padding: 17px 20px;
   }
+  @media (min-width: 576px) and (max-width: 992px){
+    padding: 17px 40px;
+  }
   .ant-row-space-between {
     align-items: center;
     text-align: center;
@@ -21,6 +24,9 @@ export const HeaderSection = styled("header")`
   .logoHome{
     width:193px;
     @media (max-width: 576px){
+      width:150px;
+    }
+    @media (min-width: 576px) and (max-width: 992px){
       width:150px;
     }
   }

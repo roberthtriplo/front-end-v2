@@ -77,6 +77,9 @@ export const Container = styled("div")`
     @media (max-width: 576px){
       background-image:none;
     }
+    @media (min-width: 576px) and (max-width: 992px){
+      background-position-x: -220px;
+    }
     img{
       width:200px;
       margin-top: 100px;
@@ -88,6 +91,11 @@ export const Container = styled("div")`
         margin-top: -130px;
         margin-left: 10px;
         display: inline;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        width: 150px;
+        margin-top: 90px;
+        margin-left: 30px;
       }
     }
     .formVentas{
@@ -105,6 +113,9 @@ export const Container = styled("div")`
         width: 200px;
         padding-top: 48px;
         margin-left: 17px;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        width: 300px;
       }
       h1{
         color: #ffe8da;
@@ -124,6 +135,11 @@ export const Container = styled("div")`
           margin-bottom: 0;
           margin-left: 0;
         }
+        @media (min-width: 576px) and (max-width: 992px){
+          font-size: 64px;
+          line-height: 60px;
+          margin-left: 30px;
+        }
       }
       p{
         color: #ffe8da;
@@ -138,6 +154,9 @@ export const Container = styled("div")`
           line-height: 2px;
           margin-left:10px;
           font-weight: 100;
+        }
+        @media (min-width: 576px) and (max-width: 992px){
+          margin-left: 30px;
         }
       }
     }

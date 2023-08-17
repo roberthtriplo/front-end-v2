@@ -9,6 +9,10 @@ export const RightBlockContainer = styled("section")`
     height:100vh;
     /*margin-bottom:50px;*/
   }
+  @media (min-width: 576px) and (max-width: 992px){
+    margin-top:0;
+    height: auto;
+  }
   .img_slider{
     width:100%;
   }
@@ -20,13 +24,24 @@ export const RightBlockContainer = styled("section")`
     @media (max-width: 576px){
       position:relative;
     }
+    @media (min-width: 576px) and (max-width: 992px){
+      .img-blue{
+        display:none;
+      }
+    }
     .btn1{
       bottom: 50px;
       left: 80px;
+      @media (min-width: 576px) and (max-width: 992px){
+        left:40px;
+      }
     }
     .btn2{
       bottom: 50px;
       left: 350px;
+      @media (min-width: 576px) and (max-width: 992px){
+        left: 220px;
+      }
     }
     button{
       background-color: #fff4e6;
@@ -41,6 +56,12 @@ export const RightBlockContainer = styled("section")`
       line-height: 50px;
       margin-right:20px;
       position:absolute;
+      @media (min-width: 576px) and (max-width: 992px){
+        height: 70px;
+        width: 150px;
+        font-size: 30px;
+        line-height: 30px;
+      }
 
       &:hover{
         color: #ffe8da;
@@ -53,7 +74,9 @@ export const RightBlockContainer = styled("section")`
     right: 0;
     bottom: 0;
     .img-orange{
-
+      @media (min-width: 576px) and (max-width: 992px){
+        display:none;
+      }
     }
     p{
       color: #ffe8da;
@@ -65,6 +88,13 @@ export const RightBlockContainer = styled("section")`
       position: absolute;
       bottom: 50px;
       right:80px;
+      @media (min-width: 576px) and (max-width: 992px){
+        width: 440px;
+        max-width: 440px;
+        right: 40px;
+        font-size: 15px;
+        bottom: 50px;
+      }
     }
     h1{
       color: #ffe8da;
@@ -80,6 +110,13 @@ export const RightBlockContainer = styled("section")`
         font-size: 70px;
         line-height: 70px;
         bottom: 450px;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        font-size: 60px;
+        line-height: 60px;
+        right: 40px;
+        bottom:80px;
+        max-width: 441px;
       }
     }
   }

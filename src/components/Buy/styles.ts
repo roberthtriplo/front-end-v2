@@ -18,6 +18,9 @@ export const Container = styled("div")`
     @media (max-width: 576px){
       height: 170px;
     }
+    @media (min-width: 576px) and (max-width: 992px){
+      height: 280px;
+    }
     img{
       margin-top: 120px;
       width: 250px;
@@ -27,6 +30,11 @@ export const Container = styled("div")`
         margin-top: 20px;
         width: 100px;
         margin-left: 20px;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        margin-top: 40px;
+        width: 200px;
+        margin-left: 60px;
       }
     }
   }
@@ -135,6 +143,10 @@ export const Container = styled("div")`
         overflow-x: auto;
         padding: 10px 0;
       }
+      @media (min-width: 768px) and (max-width: 992px){
+        -webkit-box-orient: vertical;
+        overflow-x: auto;
+      }
       .fc-filtros{
         min-width: fit-content;
         margin-right: 25px;
@@ -182,6 +194,10 @@ export const Container = styled("div")`
       @media (max-width: 576px){
         font-size: 48px;
         line-height: 42px;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        font-size: 52px;
+        line-height: 54px;
       }
     }
     h3{

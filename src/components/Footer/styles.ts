@@ -28,6 +28,9 @@ export const FooterSection = styled("footer")`
       font-size: 80px;
       margin-top:0px;
     }
+    @media (min-width: 576px) and (max-width: 992px){
+      font-size: 150px;
+    }
   }
   p{
     color: #ff8600;

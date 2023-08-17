@@ -57,7 +57,7 @@ const RightBlock = ({
       <div className="d-desktop">
         <div className="buttons-group">
           <picture>
-            <source media="(min-width:576px)" srcSet="/img/border_azul.webp" />
+            <source media="(min-width:576px)" srcSet="/img/border_azul.webp" className="img-blue" />
             <img src="/img/border_azul_mob.webp" className="img-blue"/>
           </picture>        
           <Button type="primary" className="btn1" onClick={ () => scrollTo('sale') }>Quiero Vender</Button>
@@ -66,7 +66,7 @@ const RightBlock = ({
         
         <div className="text-end-float">        
           <picture>
-            <source media="(min-width:576px)" srcSet="/img/border_naranja.webp" />
+            <source media="(min-width:576px)" srcSet="/img/border_naranja.webp" className="img-orange"/>
             <img src="/img/border_naranja_mob.webp" className="img-orange"/>
           </picture>
           <h1>Usados, recomendados por amigos</h1>
