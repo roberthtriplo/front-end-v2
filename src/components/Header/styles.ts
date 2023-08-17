@@ -12,7 +12,7 @@ export const HeaderSection = styled("header")`
     padding: 17px 20px;
   }
   @media (min-width: 576px) and (max-width: 992px){
-    padding: 17px 40px;
+    padding: 10px 40px;
   }
   .ant-row-space-between {
     align-items: center;
@@ -92,12 +92,16 @@ export const CustomNavLinkSmall = styled(NavLink)`
   color: #18216d;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
-
+  @media (min-width: 576px) and (max-width: 992px){
+    margin: 0.5rem 10px;
+  }
   a{
     color: #fff4e6;
     font-family: AT Surt DemiBold;
     font-size:16px;
-    
+    @media (min-width: 576px) and (max-width: 992px){
+      font-size:14px;
+    }
     &:hover,
     &:active,
     &:focus {
@@ -115,11 +119,16 @@ export const CustomNavLinkSmallLast = styled(NavLink)`
   color: #18216d;
   transition: color 0.2s ease-in;
   margin: 0.5rem 1rem;
+  @media (min-width: 576px) and (max-width: 992px){
+    font-size:14px;
+  }
   a{
     color: #fff4e6;
     font-family: AT Surt DemiBold;
     font-size:16px;
-
+    @media (min-width: 576px) and (max-width: 992px){
+      font-size:14px;
+    }
     &:hover,
     &:active,
     &:focus {
@@ -151,7 +160,9 @@ export const Span = styled("span")`
   display: inline-block;
   font-family: AT Surt DemiBold;
   font-size:16px;
-
+  @media (min-width: 576px) and (max-width: 992px){
+    font-size:14px;
+  }
   &:hover,
   &:active,
   &:focus {

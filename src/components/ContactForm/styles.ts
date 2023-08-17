@@ -18,12 +18,17 @@ export const ContactContainer = styled("div")`
     z-index: 1;
     left: -340px;
     @media screen and (max-width: 540px){
-        left: -120px;
-        width: 500px;
-        position: absolute;
-        transform: rotate(-21deg);
-        z-index: 1;
-        top: 25px;
+      left: -120px;
+      width: 500px;
+      position: absolute;
+      transform: rotate(-21deg);
+      z-index: 1;
+      top: 25px;
+    }
+    @media (min-width: 576px) and (max-width: 992px){
+      width: 600px;
+      left: -92px;
+      top: 26px;
     }
   }
   @mixin white-gradient {
@@ -51,6 +56,9 @@ export const ContactContainer = styled("div")`
         background-size: cover;
         background-repeat: no-repeat;
         height: 320px;
+      }
+      @media (min-width: 576px) and (max-width: 992px){
+        height:400px;
       }
       .slide-track {
           animation: scroll 40s linear infinite;
@@ -86,6 +94,9 @@ export const ContactContainer = styled("div")`
               max-height: 100px;
               @media screen and (max-width: 576px){
                 max-height: 45px;
+              }
+              @media (min-width: 576px) and (max-width: 992px){
+                max-height: 60px;
               }
           }
       }
