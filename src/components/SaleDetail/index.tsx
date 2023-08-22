@@ -55,7 +55,7 @@ const SaleDetail = () => {
         !showResult ?  
         <Container>
             <Row className="row1" id="headerSales">
-                <Col span={24} xs={24} md={24}>
+                <Col span={24} xs={24} sm={24} md={24}>
                     <img src="/img/sticker_result_2.webp" id="imgTP1"  alt="Triplo, Ventas, Compras, Colombia Bogota" className="imgSticker" onClick={ goHome }/> 
                     {/* <div className="bg_header d-none d-sm-block" id="headerSales"></div> */}
                 </Col> 
@@ -71,7 +71,7 @@ const SaleDetail = () => {
                 <Col span={24}> <p className="p1">FAVORITA</p> </Col> 
             </Row> 
             <Row className="row3 d-desktop3"> 
-                <Col span={12} xs={24} md={12} className="text-center"> 
+                <Col span={12} xs={24} sm={12} md={12} className="text-center"> 
                     <Card className="card-custom directa" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('directa') }> 
                         <img src="/img/conocer_oferta.webp" alt="Triplo Autos"  onClick={() => goResult('directa') }/> 
                         <div className="cbody"> 
@@ -85,7 +85,7 @@ const SaleDetail = () => {
                         </div> 
                     </Card> 
                 </Col> 
-                <Col span={12} xs={24} md={12} className="text-center"> 
+                <Col span={12} xs={24} sm={12} md={12} className="text-center"> 
                     <Card className="card-custom consignacion" onMouseEnter={ changeStyles } onMouseLeave={ changeStyles } onClick={() => goResult('consignacion') }> 
                         <img src="/img/conocer_consignacion.webp" alt="Triplo Autos" onClick={() => goResult('consignacion') }/> 
                         <div className="cbody"> 
@@ -112,7 +112,7 @@ const SaleDetail = () => {
                 </Col> 
             </Row> 
             <Row className="row3 d-mobile"> 
-                <Col span={12} xs={24} md={12} className="text-center"> 
+                <Col span={12} xs={24} sm={12} md={12} className="text-center"> 
                     <Card className="card-custom directa"> 
                         <img src="/img/conocer_oferta.webp" alt="Triplo Autos"  onClick={() => goResult('directa') }/> 
                         <div className="cbody"> 
@@ -126,7 +126,7 @@ const SaleDetail = () => {
                         </div> 
                     </Card> 
                 </Col> 
-                <Col span={12} xs={24} md={12} className="text-center"> 
+                <Col span={12} xs={24} sm={12} md={12} className="text-center"> 
                     <Card className="card-custom consignacion"> 
                         <img src="/img/conocer_consignacion.webp" alt="Triplo Autos" onClick={() => goResult('consignacion') }/> 
                         <div className="cbody"> 
@@ -175,7 +175,7 @@ const SaleDetail = () => {
                 </Col>
             </Row>
             <Row className="custom-top">
-                <Col span={12} xs={24} md={12} className="text-center c1">
+                <Col span={12} xs={24} sm={12} md={12} className="text-center c1">
                     <img src="/img/sticker3.webp" className="img-sticker" alt="Triplo Autos" onClick={ goHome } />
                     <img src="/img/ninas.webp" className="img-ninas" alt="Triplo Autos"/>
                 </Col>

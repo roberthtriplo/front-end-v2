@@ -153,14 +153,14 @@ const FormSale = () =>{
 
   return(
     <Row className="bgSale">
-      <Col span={12} xs={24}  md={12}>
+      <Col span={12} xs={24} sm={12}  md={12}>
         <img src="/img/sticker.webp" alt='Triplo Autos' />
         <div className="textos">
           <h1>Si quieres vender</h1>
           <p>Ingresa los datos de tu vehículo</p>
         </div>
       </Col>
-      <Col span={12} xs={24} md={12}>
+      <Col span={12} xs={24} sm={12} md={12}>
         <div className="formVentas">
           <Form
             name="basic"

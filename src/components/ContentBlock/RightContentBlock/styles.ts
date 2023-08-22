@@ -12,6 +12,9 @@ export const RightBlockContainer = styled("section")`
     margin-top: -82px;
     height: auto;
   }
+  @media (min-width: 992px) and (max-width: 1400px){
+    height: auto;
+  }
   .img_slider{
     width:100%;
   }
@@ -31,6 +34,22 @@ export const RightBlockContainer = styled("section")`
         bottom: 0;
       }
     }
+    @media (min-width: 992px) and (max-width: 1200px){
+      position:relative;
+      .img-blue{
+        position: absolute;
+        left: -390px;
+        bottom: 0;
+      }
+    }
+    @media (min-width: 1200px) and (max-width: 1400px){
+      position:relative;
+      .img-blue{
+        position: absolute;
+        left: -390px;
+        bottom: 0;
+      }
+    }
     .btn1{
       bottom: 50px;
       left: 80px;
@@ -43,6 +62,12 @@ export const RightBlockContainer = styled("section")`
       left: 350px;
       @media (min-width: 576px) and (max-width: 992px){
         left: 220px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px){
+        left:300px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px){
+        left:330px;
       }
     }
     button{
@@ -64,6 +89,17 @@ export const RightBlockContainer = styled("section")`
         font-size: 30px;
         line-height: 30px;
       }
+      @media (min-width: 992px) and (max-width: 1200px){
+        height: 80px;
+        width: 200px;
+        font-size: 40px;
+        line-height: 30px;
+      }
+      @media (min-width: 1200px) and (max-width: 1400px){
+        height: 85px;
+        width: 226px;
+        font-size: 43px;
+      }
 
       &:hover{
         color: #ffe8da;
@@ -75,7 +111,7 @@ export const RightBlockContainer = styled("section")`
     position: absolute;
     right: 0;
     bottom: 0;
-    @media (min-width: 576px) and (max-width: 992px){
+    @media (min-width: 576px) and (max-width: 1400px){
       position:relative;
     }
     .img-orange{
@@ -83,6 +119,16 @@ export const RightBlockContainer = styled("section")`
         position: absolute;
         bottom: 0px;
         right: -300px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px){
+        position: absolute;
+        bottom: 0;
+        right: -300px;
+      }
+      @media (min-width: 1200px) and (max-width: 1400px){
+        position: absolute;
+        bottom: 0;
+        right: -45px;
       }
     }
     p{
@@ -96,6 +142,13 @@ export const RightBlockContainer = styled("section")`
       bottom: 50px;
       right:80px;
       @media (min-width: 576px) and (max-width: 992px){
+        width: 262px;
+        max-width: 262px;
+        right: 40px;
+        font-size: 15px;
+        bottom: 50px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px){
         width: 262px;
         max-width: 262px;
         right: 40px;
@@ -119,6 +172,13 @@ export const RightBlockContainer = styled("section")`
         bottom: 450px;
       }
       @media (min-width: 576px) and (max-width: 992px){
+        font-size: 60px;
+        line-height: 60px;
+        right: 40px;
+        bottom: 80px;
+        max-width: 262px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px){
         font-size: 60px;
         line-height: 60px;
         right: 40px;

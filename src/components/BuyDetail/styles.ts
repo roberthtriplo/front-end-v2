@@ -22,7 +22,7 @@ export const Container = styled("div")`
     }
     .logo-c{
         position: absolute;
-        top: 100px;
+        top: 160px;
         transform: rotate(-16deg);
         left: 200px;
         width: 250px;
@@ -31,6 +31,14 @@ export const Container = styled("div")`
         @media (max-width: 576px){
             width: 200px;
             left: -15px;
+        }
+        @media (min-width: 576px) and (max-width: 992px){
+            width: 200px;
+            left: -15px;
+        }
+        @media (min-width: 1200px) and (max-width: 1400px){
+            left: -15px;
+            top:150px;
         }
     }
     .icon1 {
@@ -44,6 +52,10 @@ export const Container = styled("div")`
     .ccontainer{
         max-width:1320px;
         margin: 0 auto;
+        @media (min-width: 576px) and (max-width: 992px){
+            margin-left: 20px;
+            margin-right: 20px;
+        }
         .imgs{
             width:100%;
         }
@@ -61,7 +73,11 @@ export const Container = styled("div")`
             cursor:pointer;
             @media (max-width: 576px){
                 min-width: 350px;
-                margin-bottom:30px;
+                margin-bottom:0px;
+                margin-top:30px;
+            }
+            @media (min-width:576px) and (max-width: 768px){
+                min-width: 285px;
             }
             @media (min-width:768px) and (max-width: 1400px){
                 min-width: 300px;
@@ -133,17 +149,25 @@ export const Container = styled("div")`
         margin: 0;
         line-height: 195px;
         display: inline;
-        @media screen and (max-width: 540px){
+        @media screen and (max-width: 576px){
             font-size: 50px;
             line-height: 45px;
         }
-        @media (min-width:540px) and (max-width: 992px){
+        @media (min-width:576px) and (max-width: 768px){
             font-size: 80px;
             line-height: 75px;
         }
-        @media (min-width:992px) and (max-width: 1400px){
+        @media (min-width:768px) and (max-width: 992px){
             font-size: 120px;
             line-height: 115px;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+            font-size: 140px;
+            line-height: 135px;
+        }
+        @media (min-width: 1200px) and (max-width: 1400px){
+            font-size: 165px;
+            line-height: 150px;
         }
     }
     .bgDesc{
@@ -179,6 +203,15 @@ export const Container = styled("div")`
                 width:65px;
             }
         }
+        @media (min-width: 576px) and (max-width: 768px){
+            margin-bottom:60px;
+        }
+        @media (min-width: 768px) and (max-width: 992px){
+            margin-bottom:70px;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+            margin-left: 25px;
+        }
         label{
             font-family: "MangoGrotesque-Regular";
             font-size: 33px;
@@ -186,11 +219,11 @@ export const Container = styled("div")`
             color: #ffe8da;
         }
         .icon-sh{
-            margin-left:12px;
+            margin-left:34px;
             svg{
-                width: 28px;
-                height: 28px;
-                color: #ff8600;
+                width: 38px;
+                height: 38px;
+                color: #f6871f;
                 cursor:pointer;
             }
         }
@@ -232,6 +265,13 @@ export const Container = styled("div")`
             margin-left: 20px;
             margin-top:170px;
         }
+        @media (min-width: 576px) and (max-width: 992px){
+            margin-top:170px;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+            margin-right: 20px;
+            margin-left: 20px;
+        }
         h1{
             font-family: MangoGrotesque-Regular;
             font-size: 65px;
@@ -239,6 +279,10 @@ export const Container = styled("div")`
             color: #ffe8da;
             margin: 0;
             font-weight:100;
+            @media (min-width: 576px) and (max-width: 992px){
+                font-size: 45px;
+                line-height: 40px;
+            }
         }
 
         h2{
@@ -246,6 +290,12 @@ export const Container = styled("div")`
             margin: 0;
             font-family: "AT Surt DemiBold";
             font-size: 28px;
+            @media (min-width: 576px) and (max-width: 768px){
+                font-size: 17px;
+            }
+            @media (min-width: 768px) and (max-width: 992px){
+                font-size: 22px;
+            }
         }
         p{
             color: #ffe8da;
@@ -253,6 +303,9 @@ export const Container = styled("div")`
             line-height: 1.2;
             font-family: "AT Surt DemiBold";
             font-size: 16px;
+            @media (min-width: 576px) and (max-width: 768px){
+                font-size: 14px;
+            }
         }
         .pasesor{
             line-height: 1.5;
@@ -325,6 +378,9 @@ export const Container = styled("div")`
                     width: auto;
                     height: 40px;
                     margin-bottom:10px;
+                }
+                @media (min-width:576px) and (max-width: 768px){
+                    width:30px;
                 }
             }
             p:last-child{

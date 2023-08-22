@@ -17,6 +17,15 @@ export const Container = styled("div")`
         @media screen and (max-width: 576px){
             height: 25vh;
         }
+        @media (min-width: 576px) and (max-width: 768px){
+            height: 25vh;
+        }
+        @media (min-width: 768px) and (max-width: 992px){
+            height: 30vh;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+            height: 30vh;
+        }
     }
 
     .row2{
@@ -24,6 +33,15 @@ export const Container = styled("div")`
         position:relative;
         @media screen and (max-width: 576px){
             height: 75vh;
+        }
+        @media (min-width: 576px) and (max-width: 768px){
+            height: 75vh;
+        }
+        @media (min-width: 768px) and (max-width: 992px){
+            height: 70vh;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+            height: 70vh;
         }
         .st{
             position: absolute;
@@ -36,6 +54,11 @@ export const Container = styled("div")`
                 top:-50px;
                 width:100px;
             }
+            @media (min-width: 576px) and (max-width: 768px){
+                width: 150px;
+                top: -80px;
+                left: 80px;
+            }
         }
         h2{
             font-family: "MangoGrotesque-Bold";
@@ -46,6 +69,20 @@ export const Container = styled("div")`
             @media screen and (max-width: 576px){
                 margin-top: 60px;
                 font-size: 28px;
+            }
+            @media (min-width: 576px) and (max-width: 768px){
+                font-size: 50px;
+                margin-top: 94px;
+                margin-bottom: 20px;
+                line-height: 50px;
+            }
+            @media (min-width: 768px) and (max-width: 992px){
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @media (min-width: 992px) and (max-width: 1200px){
+                font-size: 45px;
+                line-height: 55px;
             }
         }
         p{

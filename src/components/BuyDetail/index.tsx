@@ -72,6 +72,7 @@ const BuyDetail = () => {
     const interes = 0.0190;
     
     useEffect(() => {
+        window.scrollTo(0, 0);
         CarsService.getById(id.id).then(async (resp : any) =>{
             setCar(resp.cars[0]);  
             setSlides(resp.imgs);
@@ -355,18 +356,18 @@ const BuyDetail = () => {
             <Col span={24}>
                 <Card className='card-custom'>
                     <Row>
-                        <Col xs={24} md={12} className='text-start'>
+                        <Col xs={24} sm={12} md={12} className='text-start'>
                             <h1>{ car.make +' '+car.model+' '+car.version }</h1>
                             <p>{ car.year }</p>
                         </Col>
-                        <Col xs={24} md={12} className='text-end te-mo'>
+                        <Col xs={24} sm={12} md={12} className='text-end te-mo'>
                             <p>Precio</p>
                             <h2>{ moneyFormat(car.price) }</h2>
                             <p>Descuento disponible</p>
                         </Col>
                     </Row>
                     <Row className='mt-30'>
-                        <Col span={12} xs={24} md={12} className='border-r'>
+                        <Col span={12} xs={24} sm={12} md={12} className='border-r'>
                             <Row className='mb25'>
                                 <Col span={12}>
                                     <div className='caracteristica'>
@@ -428,13 +429,13 @@ const BuyDetail = () => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col span={6} xs={24} md={6} className='text-center border-r'>
+                        <Col span={6} xs={24} sm={6} md={6} className='text-center border-r'>
                             <p>Cuotas mensuales de</p>
                             <h2>{ moneyFormat(car.price) }</h2>
                             <a onClick={ showSimulador } className='lk'>Ingresar al simulador</a>
                             <a href="https://www.busqo.com/campanas/TriploVh/seguro-carro" target='_blank' className='btn-cotiza'>Cotizar seguro de mi vehículo</a>
                         </Col>
-                        <Col span={6} xs={24} md={6} className='text-center'>
+                        <Col span={6} xs={24} sm={6} md={6} className='text-center'>
                             <p className='pasesor'>Ponte en contacto con un asesor</p>
                             <img src="/img/icons/icon_what.webp" onClick={goWs} className="img-fluid icon-what" alt="Car #1" />  
                         </Col>
@@ -472,13 +473,13 @@ const BuyDetail = () => {
                     <p>Este vehículo ya se encuentra <span>separado</span></p>
                 </Col> :
                 <>
-                    <Col span={12} xs={24} md={12} className='text-center'>
+                    <Col span={12} xs={24} sm={12} md={12} className='text-center'>
                         <button className="btn btn-tipo2" onMouseEnter={showMinicard} onMouseLeave={noShowMinicard} onClick={ showPago }>Separar el carro</button>
                         <div className="minicard minicard-1">
                             <p>¡<span>Asegura</span> el carro de tus sueños y evita que alguien más se quede con él! Reservalo con <span>$1.000.000</span> y en caso de que te arrepientas realizamos la devolución del <span>100%</span></p>
                         </div>
                     </Col>
-                    <Col span={12} xs={24} md={12} className='text-center'>
+                    <Col span={12} xs={24} sm={12} md={12} className='text-center'>
                         <button className="btn btn-tipo2" onMouseEnter={showMinicard2} onMouseLeave={noShowMinicard2} onClick={ showCita }>Agendar cita</button>
                         <div className="minicard minicard-2">
                             <p><span>Agenda</span> tu cita con uno de nuestros asesores y conoce pronto tu <span>nuevo vehículo</span></p>

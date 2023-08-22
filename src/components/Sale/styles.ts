@@ -80,6 +80,9 @@ export const Container = styled("div")`
     @media (min-width: 576px) and (max-width: 992px){
       background-position-x: -220px;
     }
+    @media (min-width: 992px) and (max-width: 1200px){
+      background-position-x: -110px;
+    }
     img{
       width:200px;
       margin-top: 100px;
@@ -104,6 +107,9 @@ export const Container = styled("div")`
           padding-left: 30px;
           padding-right: 30px;
         }
+      }
+      @media (min-width: 576px) and (max-width: 768px){
+        max-width: 300px;
       }
     }
     .textos{

@@ -21,6 +21,12 @@ export const Container = styled("div")`
     @media (min-width: 576px) and (max-width: 992px){
       height: 280px;
     }
+    @media (min-width: 992px) and (max-width: 1200px){
+      height: 330px;
+    }
+    @media (min-width: 1200px) and (max-width: 1400px){
+      height: 400px;
+    }
     img{
       margin-top: 120px;
       width: 250px;
@@ -35,6 +41,14 @@ export const Container = styled("div")`
         margin-top: 40px;
         width: 200px;
         margin-left: 60px;
+      }
+      @media (min-width: 992px) and (max-width: 1200px){
+        margin-top: 80px;
+        width: 220px;
+        margin-left: 80px;
+      }
+      @media (min-width: 1200px) and (max-width: 1400px){
+        margin-top: 80px;
       }
     }
   }
@@ -147,9 +161,15 @@ export const Container = styled("div")`
         -webkit-box-orient: vertical;
         overflow-x: auto;
       }
+      @media (min-width: 992px) and (max-width: 1400px){
+        padding: 8px 25px;
+      }
       .fc-filtros{
         min-width: fit-content;
         margin-right: 25px;
+        @media (min-width: 992px) and (max-width: 1400px){
+          margin-right: 15px;
+        }
         a{
           color: #ffedd2;
           font-family: AT Surt Regular;
@@ -159,6 +179,9 @@ export const Container = styled("div")`
             border: 1px solid #c14717;
             border-radius: 20px!important;
             font-size: 16px;
+          }
+          @media (min-width: 992px) and (max-width: 1400px){
+            font-size: 17px;
           }
         }
         .ant-dropdown-open{

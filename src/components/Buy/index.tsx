@@ -3,10 +3,11 @@ import { withTranslation } from "react-i18next";
 import { Container } from "./styles";
 import { Col, Dropdown, Input, MenuProps, Row, Select, Slider, Space, Typography, } from "antd";
 import CarsService from '../../services/carsService';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { DownOutlined } from '@ant-design/icons';
 import { DollarOutlined } from '@ant-design/icons';
 import { CloseCircleOutlined } from '@ant-design/icons';
+import { getScroll } from '../../common/utils/getWindow';
 
 const Buy = () => {
   const [cars, setCars] = useState([]);
@@ -44,13 +45,29 @@ const Buy = () => {
   const [yearSelectKeys, setYearSelectKeys] = useState([]);
   const [colorSelectKeys, setColorSelectKeys] = useState([]);
   const [transSelectKeys, setTransSelectKeys] = useState([]);
-
+  const navigate = useNavigate();
+  
   const verMas = () =>{
     setShowMas(!showMas);
+    localStorage.setItem("showMas", JSON.stringify(!showMas));
   }
   useEffect(() => {
+    if(localStorage.getItem("showMas")){
+      let _showMas: any = localStorage.getItem("showMas");
+      setShowMas(JSON.parse(_showMas));
+    }    
     getCars("");
   }, []);
+
+  const goToTop = (top: any) => {
+    window.scrollTo({
+        top: top,
+        behavior: 'smooth',
+    });
+  };  
+  const saveDataLocal = (event: any) =>{
+    localStorage.setItem("positionHomeY", event.pageY);
+  }
 
   const getCars = (order: any) =>{
     CarsService.getAll(order).then((resp: any) =>{
@@ -64,6 +81,10 @@ const Buy = () => {
       getColorFilter(resp.cars);
       getPriceFilter(resp.cars);
       getKmFilter(resp.cars);
+      if(localStorage.getItem("positionHomeX")){
+        let posY: any = localStorage.getItem("positionHomeY");
+        goToTop(parseInt(posY) - 200)
+      }     
     })
   }
   const getMakeFilter = (carsData: any) =>{
@@ -430,7 +451,7 @@ const Buy = () => {
     carsData.forEach((data: any) =>{ result.push(data.kilometers) })
     let _max: any = Math.max(...result)
     setMaxKm(_max)
-    setValueKm([0, _max])
+    setValueKm([0, _max]);    
   }
 
   const orderBy = (value: any) =>{
@@ -518,6 +539,7 @@ const Buy = () => {
     return `${kmFormat(value)}`
   };
 
+  
   return (
     <Container id="buy">
       <Row className="bg">
@@ -797,7 +819,7 @@ const Buy = () => {
           cars.length > 0 ? cars.slice(0, showMas ? cars.length : 4).map(
             (item: any, index) => (
               <Col span={24} xs={24} md={12} key={index}>
-                <Link to={"/comprar/detalle/"+item.id}>
+                <Link to={'/comprar/detalle/'+item.id} onClick={ saveDataLocal }>
                   <div className='img-wrap' >
                       <img src={item.img_main } className="img-fluid img__img img_car" alt="Car #1" loading="lazy" />
                       <div className="description">

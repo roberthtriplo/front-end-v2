@@ -555,6 +555,7 @@ export const Styles = createGlobalStyle`
     }
     .body-modal-2{
         height: auto;
+        width:auto !important;
     }
     .body-modal{
         background-color: #fff4e6;
@@ -859,6 +860,7 @@ export const Styles = createGlobalStyle`
                 background:url(/img/border_azul_mob.webp);
                 background-repeat:no-repeat;
                 background-position:bottom;
+                background-size: contain;
             }
         }
         .content{
@@ -921,6 +923,9 @@ export const Styles = createGlobalStyle`
         display:block !important;
         @media (max-width: 576px){
             display: none !important;
+        }
+        @media (min-width: 992px) and (max-width: 1200px){
+            position:relative;
         }
     }
     .d-desktop2{

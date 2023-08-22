@@ -32,6 +32,10 @@ export const Container = styled("div")`
                 margin-top:100px;
                 font-size:20px;
             }
+            @media (min-width: 992px) and (max-width: 1200px){
+                margin-top:100px;
+                font-size:20px;
+            }
         }
         .wc{
             max-width: 250px;
@@ -45,6 +49,12 @@ export const Container = styled("div")`
                 right: 0;
                 margin: 0 auto;
                 max-width: 180px;
+            }
+            @media (min-width: 992px) and (max-width: 1200px){
+                max-width: 170px;
+                position: absolute;
+                left: 116px;
+                top: 120px;
             }
         }
         .what-icon{
@@ -65,6 +75,10 @@ export const Container = styled("div")`
                     position: absolute;
                     right: 0px;
                     top: 190px;
+                }
+                @media (min-width: 992px) and (max-width: 1200px){
+                    width: 80px;
+                    height: 70px;
                 }
             }
         }
@@ -96,6 +110,11 @@ export const Container = styled("div")`
                 right: 0;
                 bottom: 20px;
             }
+            @media (min-width: 992px) and (max-width: 1200px){
+                font-size: 30px;
+                max-width: 360px;
+                line-height: 50px;
+            }
         }
     }
 
@@ -115,6 +134,9 @@ export const Container = styled("div")`
             background-size: contain;
             background-repeat: no-repeat;
         }
+        @media (min-width: 992px) and (max-width: 1200px){
+            background-position-x: 300px;
+        }
         .c1{
             display: flex;
             align-items: center;
@@ -126,6 +148,9 @@ export const Container = styled("div")`
                 @media screen and (max-width: 576px){
                     max-width:215px;
                     z-index:2;
+                }
+                @media (min-width: 992px) and (max-width: 1200px){
+                    max-width: 330px;
                 }
             }
             .img-sticker{
@@ -141,6 +166,9 @@ export const Container = styled("div")`
                     top: 20px;
                     left: 20px;
                     z-index:2;
+                }
+                @media (min-width: 992px) and (max-width: 1200px){
+                    max-width: 200px;
                 }
             }
         }
@@ -170,6 +198,7 @@ export const Container = styled("div")`
                 margin:0;
             }
         }
+        
     }
     .row1{
         height:50vh;
@@ -195,6 +224,9 @@ export const Container = styled("div")`
                 left: 0;
                 top:-110px;
             }
+            @media (min-width: 576px) and (max-width: 768px){
+                left: 20px;
+            }
         }
         .p1{
             margin: 0;
@@ -206,6 +238,12 @@ export const Container = styled("div")`
             font-family: AT Surt Regular;
             font-size: 30px;
             line-height: 1;
+            @media (min-width: 576px) and (max-width: 992px){
+                display:none;
+            }
+            @media (min-width: 992px) and (max-width: 1200px){
+                font-size:16px;
+            }
         }
     }
     .bg_header2{
@@ -228,6 +266,12 @@ export const Container = styled("div")`
             font-family: MangoGrotesque-Bold;
             font-size: 120px;
             line-height: 1;
+            @media (min-width: 576px) and (max-width: 992px){
+                display:none;
+            }
+            @media (min-width: 992px) and (max-width: 1200px){
+                font-size: 70px;
+            }
         }
     }
     .row3{
@@ -255,10 +299,29 @@ export const Container = styled("div")`
                 margin-bottom:70px;
                 height: 650px;
             }
+            @media (min-width: 576px) and (max-width: 768px){
+                width:370px;
+            }
+            @media (min-width: 768px) and (max-width: 992px){
+                width:400px;
+            }
+            @media (min-width: 992px) and (max-width: 1200px){
+                width: 400px;
+                height: 585px;
+            }
             .ant-card-body {
                 padding: 40px;
                 @media screen and (max-width: 576px){
                     padding:0;
+                }
+                @media (min-width: 576px) and (max-width: 768px){
+                    padding:20px;
+                }
+                @media (min-width: 768px) and (max-width: 992px){
+                    padding:20px;
+                }
+                @media (min-width: 992px) and (max-width: 1200px){
+                    padding:20px;
                 }
             }
             img{
@@ -283,6 +346,9 @@ export const Container = styled("div")`
                     height:650px;
                     border-radius:40px;
                 }
+                @media (min-width: 576px) and (max-width: 768px){
+                    padding:15px;
+                }
                 h1{
                     padding-top:30px;
                     margin-bottom: 30px;
@@ -296,6 +362,20 @@ export const Container = styled("div")`
                         font-size:55px;
                         padding-top: 15px;
                         margin-bottom: 15px;
+                    }
+                    @media (min-width: 576px) and (max-width: 768px){
+                        font-size: 54px;
+                        line-height: 35px;
+                        padding-top: 15px;
+                        margin-bottom: 15px;
+                    }
+                    @media (min-width: 768px) and (max-width: 992px){
+                        padding-top: 10px;
+                        margin-bottom: 15px;
+                    }
+                    @media (min-width: 992px) and (max-width: 1200px){
+                        padding-top: 15px;
+                        margin-bottom: 20px;
                     }
                 }
                 h5{
@@ -445,8 +525,32 @@ export const Container = styled("div")`
             background-size: cover;
             @media screen and (max-width: 576px){
                 background-image:none;
+            }            
+            @media (min-width: 576px) and (max-width: 768px){
+                &:hover{
+                    background-color:#ff8600;
+                    background-image:none;
+                    cursor:pointer;
+                    .cbody{
+                        cursor:pointer;
+                        background:#001821;
+                        ul,p,li, h1, h5, h2{
+                            color: #fff4e6;
+                        }
+                        .ant-collapse-header-text{
+                            color: #fff4e6;
+                        }
+                        .ant-collapse{
+                            .ant-collapse-item{
+                                .ant-collapse-header{
+                                    /*border-bottom-color: #fff4e6;*/
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            @media screen and (min-width: 576px){
+            @media screen and (min-width: 768px){
                 &:hover{
                     background-color:#ff8600;
                     background-image:none;
@@ -480,7 +584,24 @@ export const Container = styled("div")`
             @media screen and (max-width: 576px){
                 background-image:none;
             }
-            @media screen and (min-width: 576px){
+            @media (min-width: 576px) and (max-width: 768px){
+                &:hover{
+                    background-color:#ff8600;
+                    background-image:none;
+                    cursor:pointer;
+                    .cbody{
+                        cursor:pointer;
+                        background:#001821;
+                        ul,p,li, h1, h5, h2{
+                            color: #fff4e6;
+                        }
+                        ul::before {
+                            border-color:#fff4e6;
+                        }                    
+                    }
+                }    
+            } 
+            @media screen and (min-width: 768px){
                 &:hover{
                     background-color:#ff8600;
                     background-image:none;
